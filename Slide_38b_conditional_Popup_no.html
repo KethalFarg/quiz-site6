@@ -1,0 +1,146 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "dark-bg": "#3B4954",
+        "teal-primary": "#4A9B8E",
+        "teal-light": "#5CADAA"
+      },
+      "fontFamily": {
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head>
+<body class="bg-dark-bg min-h-screen flex items-center justify-center p-4">
+
+    <!-- Overlay Background -->
+    <div id="overlay" class="fixed inset-0 bg-dark-bg bg-opacity-90 z-10"></div>
+
+    <!-- Main Content Background -->
+    <div id="main-content" class="relative z-20 w-full max-w-sm">
+        
+        <!-- Phone Number Popup Modal -->
+        <div id="phone-popup" class="bg-gray-100 rounded-2xl overflow-hidden shadow-2xl">
+            
+            <!-- Header Section -->
+            <div id="popup-header" class="bg-gray-100 px-6 pt-8 pb-4">
+                <div class="flex items-center justify-center space-x-3">
+                    <i class="fa-solid fa-sticky-note text-teal-primary text-xl"></i>
+                    <h2 class="text-teal-primary text-xl font-semibold">One Last Step</h2>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div id="popup-content" class="bg-gray-100 px-6 pb-6">
+                <p class="text-gray-800 text-base leading-relaxed text-center mb-6">
+                    No problem - Please enter your phone number to receive information securely.
+                </p>
+                
+                <!-- Phone Number Input -->
+                <div id="phone-input-section" class="mb-4">
+                    <input type="tel" id="phone-number" placeholder="(123) 456-7890" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 text-base focus:outline-none focus:ring-2 focus:ring-teal-primary focus:border-transparent">
+                </div>
+            </div>
+
+            <!-- Button Section -->
+            <div id="popup-buttons" class="px-6 py-8" style="background: linear-gradient(to right, #2D6B5F 0%, #3A7D7A 50%, #1A9B85 100%);">
+                
+                <!-- Get Report Button -->
+                <button id="get-report-button" class="w-full bg-white text-teal-primary font-semibold py-4 px-6 rounded-lg text-base hover:bg-gray-50 transition-all duration-200 shadow-lg mb-6">
+                    Get Report
+                </button>
+
+                <!-- Privacy Notice -->
+                <div id="privacy-notice" class="text-center">
+                    <p class="text-white text-xs leading-relaxed opacity-90">
+                        We take privacy seriously. Your phone number is used to verify your results and ensure a licensed provider can contact you, if needed.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Format phone number input
+        document.getElementById('phone-number').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            let formattedValue = '';
+            
+            if (value.length > 0) {
+                formattedValue = '(' + value.substring(0, 3);
+            }
+            if (value.length >= 4) {
+                formattedValue += ') ' + value.substring(3, 6);
+            }
+            if (value.length >= 7) {
+                formattedValue += '-' + value.substring(6, 10);
+            }
+            
+            e.target.value = formattedValue;
+        });
+
+        // Add click handler for get report button
+        document.getElementById('get-report-button').addEventListener('click', function() {
+            const phoneNumber = document.getElementById('phone-number').value;
+            if (phoneNumber.length >= 14) {
+                console.log('Phone number submitted:', phoneNumber);
+                // Add your logic here
+            } else {
+                alert('Please enter a valid phone number');
+            }
+        });
+
+        // Close popup when clicking overlay
+        document.getElementById('overlay').addEventListener('click', function() {
+            document.getElementById('phone-popup').style.display = 'none';
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+
+</body></html>

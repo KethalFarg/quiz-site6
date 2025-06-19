@@ -1,0 +1,213 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script><script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        ::-webkit-scrollbar { display: none;}
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes fillProgress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        
+        .spinner {
+            animation: spin 1s linear infinite;
+        }
+        
+        .progress-fill {
+            animation: fillProgress 3s ease-in-out forwards;
+        }
+        
+        .progress-fill-2 {
+            animation: fillProgress 4s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+        
+        .progress-fill-3 {
+            animation: fillProgress 5s ease-in-out forwards;
+            animation-delay: 2s;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .step-complete {
+            animation: stepComplete 0.5s ease-in-out forwards;
+        }
+        
+        @keyframes stepComplete {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .bg-custom-teal {
+            background-color: #1B9A85;
+        }
+        
+        .border-t-custom-teal {
+            border-top-color: #1B9A85;
+        }
+    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head>
+<body class="bg-slate-700 min-h-screen">
+    <div id="loading-screen" class="flex flex-col items-center pt-16 px-6">
+        <!-- Logo Section -->
+        <div id="logo-section" class="mb-16">
+            <div class="text-center">
+                <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/0b98e6b6-e3f9-4251-b9e3-e82eb5f47600/public" alt="Better Joint" class="w-48 h-auto mx-auto">
+            </div>
+        </div>
+        
+        <!-- Loading Steps -->
+        <div id="loading-steps" class="w-full max-w-sm space-y-8">
+            <!-- Step 1: Comparing to similar cases -->
+            <div id="step-1" class="flex items-center space-x-4 fade-in">
+                <div class="spinner w-6 h-6 border-2 border-gray-400 border-t-custom-teal rounded-full"></div>
+                <div class="flex-1">
+                    <div class="text-white text-base font-medium mb-2">comparing to similar cases</div>
+                    <div class="w-full bg-gray-600 rounded-full h-2">
+                        <div class="bg-custom-teal h-2 rounded-full progress-fill"></div>
+                    </div>
+                </div>
+                <div id="check-1" class="w-6 h-6 bg-custom-teal rounded-full items-center justify-center hidden">
+                    <i class="fas fa-check text-white text-xs"></i>
+                </div>
+            </div>
+            
+            <!-- Step 2: Analyzing treatment compatibility -->
+            <div id="step-2" class="flex items-center space-x-4 opacity-50">
+                <div id="spinner-2" class="w-6 h-6 border-2 border-gray-400 border-t-gray-400 rounded-full"></div>
+                <div class="flex-1">
+                    <div class="text-white text-base font-medium mb-2">analyzing treatment compatibility</div>
+                    <div class="w-full bg-gray-600 rounded-full h-2">
+                        <div id="progress-2" class="bg-custom-teal h-2 rounded-full w-0"></div>
+                    </div>
+                </div>
+                <div id="check-2" class="w-6 h-6 bg-custom-teal rounded-full items-center justify-center hidden">
+                    <i class="fas fa-check text-white text-xs"></i>
+                </div>
+            </div>
+            
+            <!-- Step 3: Finalizing results -->
+            <div id="step-3" class="flex items-center space-x-4 opacity-50">
+                <div id="spinner-3" class="w-6 h-6 border-2 border-gray-400 border-t-gray-400 rounded-full"></div>
+                <div class="flex-1">
+                    <div class="text-white text-base font-medium mb-2">finalizing results</div>
+                    <div class="w-full bg-gray-600 rounded-full h-2">
+                        <div id="progress-3" class="bg-custom-teal h-2 rounded-full w-0"></div>
+                    </div>
+                </div>
+                <div id="check-3" class="w-6 h-6 bg-custom-teal rounded-full items-center justify-center hidden">
+                    <i class="fas fa-check text-white text-xs"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animation sequence
+        setTimeout(() => {
+            // Complete step 1
+            document.getElementById('step-1').querySelector('.spinner').style.display = 'none';
+            document.getElementById('check-1').style.display = 'flex';
+            document.getElementById('check-1').classList.add('step-complete');
+            
+            // Start step 2
+            document.getElementById('step-2').classList.remove('opacity-50');
+            document.getElementById('spinner-2').classList.add('spinner');
+            document.getElementById('spinner-2').classList.remove('border-t-gray-400');
+            document.getElementById('spinner-2').classList.add('border-t-custom-teal');
+            document.getElementById('progress-2').classList.add('progress-fill-2');
+        }, 3000);
+        
+        setTimeout(() => {
+            // Complete step 2
+            document.getElementById('spinner-2').style.display = 'none';
+            document.getElementById('check-2').style.display = 'flex';
+            document.getElementById('check-2').classList.add('step-complete');
+            
+            // Start step 3
+            document.getElementById('step-3').classList.remove('opacity-50');
+            document.getElementById('spinner-3').classList.add('spinner');
+            document.getElementById('spinner-3').classList.remove('border-t-gray-400');
+            document.getElementById('spinner-3').classList.add('border-t-custom-teal');
+            document.getElementById('progress-3').classList.add('progress-fill-3');
+        }, 6000);
+        
+        setTimeout(() => {
+            // Complete step 3
+            document.getElementById('spinner-3').style.display = 'none';
+            document.getElementById('check-3').style.display = 'flex';
+            document.getElementById('check-3').classList.add('step-complete');
+            
+            // Redirect to results page or show completion
+            setTimeout(() => {
+                document.getElementById('loading-screen').innerHTML = `
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-custom-teal rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-check text-white text-2xl"></i>
+                        </div>
+                        <div class="text-white text-xl font-medium">Analysis Complete!</div>
+                        <div class="text-gray-400 text-sm mt-2">Redirecting to your results...</div>
+                    </div>
+                `;
+            }, 1000);
+        }, 9000);
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+</body></html>

@@ -1,0 +1,156 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "medical-teal": "#0F9890",
+        "softwave-yellow": "#FFD700"
+      },
+      "fontFamily": {
+        "montserrat": [
+          "Montserrat",
+          "sans-serif"
+        ],
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head>
+<body class="font-montserrat bg-gradient-to-b from-gray-100 to-gray-200">
+    <div id="quiz-container" class="max-w-md mx-auto relative h-[100vh] flex flex-col">
+        <!-- Top Header Banner -->
+        <div id="header-banner" class="bg-gradient-to-r from-[#323743] to-[#0D9C95] pt-6 pb-8 px-4 relative">
+            <!-- Back Button -->
+            <div id="back-button" class="absolute top-6 left-4 z-10">
+                <button class="w-8 h-8 flex items-center justify-center">
+                    <i class="fa-solid fa-arrow-left text-gray-300 text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="text-center pt-2">
+                <h1 class="text-white font-bold text-3xl leading-tight">
+                    How Much Time<br>Does This Take?
+                </h1>
+            </div>
+        </div>
+        
+        <!-- Main Content Section -->
+        <div id="content-section" class="flex-grow px-4 py-6 flex flex-col">
+            <!-- Icon Section -->
+            <div id="icon-section" class="text-center mb-8">
+                <div class="w-16 h-16 bg-softwave-yellow rounded-full flex items-center justify-center mx-auto">
+                    <i class="fa-solid fa-clock text-gray-800 text-2xl"></i>
+                </div>
+            </div>
+            
+            <!-- Time Cards -->
+            <div id="time-cards-section" class="space-y-4 mb-8">
+                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 flex items-start space-x-3">
+                    <div class="w-6 h-6 rounded-full bg-purple-100 border-2 border-purple-400 flex items-center justify-center flex-shrink-0 mt-1">
+                        <i class="fa-solid fa-check text-purple-600 text-xs"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base mb-1">Each Session</h3>
+                        <p class="text-gray-700 text-sm">Takes just 15-20 minutes</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 flex items-start space-x-3">
+                    <div class="w-6 h-6 rounded-full bg-purple-100 border-2 border-purple-400 flex items-center justify-center flex-shrink-0 mt-1">
+                        <i class="fa-solid fa-check text-purple-600 text-xs"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base mb-1">No Downtime</h3>
+                        <p class="text-gray-700 text-sm">return to normal activities immediately</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 flex items-start space-x-3">
+                    <div class="w-6 h-6 rounded-full bg-purple-100 border-2 border-purple-400 flex items-center justify-center flex-shrink-0 mt-1">
+                        <i class="fa-solid fa-check text-purple-600 text-xs"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base mb-1">Most patients</h3>
+                        <p class="text-gray-700 text-sm">need just 4-6 treatments</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Statistics -->
+            <div id="stats-section" class="mb-8 text-center">
+                <div class="mb-2">
+                    <span class="text-6xl font-bold text-gray-900" style="font-family: 'Brush Script MT', cursive;">94%</span>
+                </div>
+                <p class="text-gray-700 font-medium text-base">
+                    of patients report<br>noticeable pain relief.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Next Button -->
+        <div id="next-button" class="mb-8 px-8">
+            <button class="bg-softwave-yellow text-black font-bold text-base w-full py-3 rounded-full flex items-center justify-center shadow-md">
+                NEXT
+                <i class="fa-solid fa-play ml-2 text-sm"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nextButton = document.getElementById('next-button').querySelector('button');
+            const backButton = document.getElementById('back-button').querySelector('button');
+            
+            nextButton.addEventListener('click', function() {
+                console.log('Navigating to next screen');
+            });
+            
+            backButton.addEventListener('click', function() {
+                console.log('Navigating back');
+            });
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+</body></html>

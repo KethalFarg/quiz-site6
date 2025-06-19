@@ -1,0 +1,120 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "dark-bg": "#3B4954",
+        "teal-primary": "#4A9B8E",
+        "teal-light": "#5CADAA"
+      },
+      "fontFamily": {
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head>
+<body class="bg-dark-bg min-h-screen flex items-center justify-center p-4">
+
+    <!-- Overlay Background -->
+    <div id="overlay" class="fixed inset-0 bg-dark-bg bg-opacity-90 z-10"></div>
+
+    <!-- Main Content Background -->
+    <div id="main-content" class="relative z-10 w-full max-w-sm">
+        
+        <!-- Popup Modal -->
+        <div id="treatment-popup" class="bg-gray-100 rounded-2xl overflow-hidden shadow-2xl">
+            
+            <!-- Header Section -->
+            <div id="popup-header" class="bg-gray-100 px-6 pt-8 pb-4">
+                <h2 class="text-teal-primary text-xl font-semibold text-center">Treatment question</h2>
+            </div>
+
+            <!-- Question Content -->
+            <div id="popup-content" class="bg-gray-100 px-6 pb-6">
+                <p class="text-gray-800 text-base leading-relaxed text-center">
+                    This solution only works for people who stay consistent. Are you someone who follows through once they begin?
+                </p>
+            </div>
+
+            <!-- Buttons Section -->
+            <div id="popup-buttons" class="px-6 py-8 space-y-4" style="background: linear-gradient(to right, #3A8B7E 0%, #4C9D9A 50%, #1DB4A1 100%);">
+                
+                <!-- Primary Button -->
+                <button id="yes-button" class="w-full bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 text-white font-medium py-4 px-6 rounded-lg text-base hover:bg-opacity-30 transition-all duration-200 shadow-lg flex items-center justify-center space-x-3">
+                    <span class="text-xl">💪</span>
+                    <span>Yes, I finish what I start</span>
+                </button>
+
+                <!-- Secondary Button -->
+                <button id="sometimes-button" class="w-full bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 text-white font-medium py-3 px-6 rounded-lg text-base hover:bg-opacity-30 transition-all duration-200 shadow-lg flex items-center justify-center space-x-3">
+                    <span class="text-xl">🤔</span>
+                    <span>sometimes</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Add click handlers for buttons
+        document.getElementById('yes-button').addEventListener('click', function() {
+            console.log('User selected: Yes, I finish what I start');
+            // Add your logic here
+        });
+
+        document.getElementById('sometimes-button').addEventListener('click', function() {
+            console.log('User selected: sometimes');
+            // Add your logic here
+        });
+
+        // Close popup when clicking overlay
+        document.getElementById('overlay').addEventListener('click', function() {
+            document.getElementById('treatment-popup').style.display = 'none';
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+
+</body></html>

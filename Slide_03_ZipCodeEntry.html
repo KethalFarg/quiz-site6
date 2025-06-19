@@ -1,0 +1,148 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "softwave-blue": "#0B3B6B",
+        "softwave-pink": "#FF6B99",
+        "softwave-gray": "#F5F6F8",
+        "softwave-yellow": "#FFD54F"
+      },
+      "fontFamily": {
+        "montserrat": [
+          "Montserrat",
+          "sans-serif"
+        ],
+        "script": [
+          "\"Dancing Script\"",
+          "cursive"
+        ],
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body class="font-montserrat bg-gradient-to-b from-[#323743] to-[#0d9c95] min-h-screen flex flex-col items-center justify-start pt-12 px-4">
+    
+    <!-- Logo Block -->
+    <div id="logo-block" class="flex flex-col items-center justify-center mb-8">
+        <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/0b98e6b6-e3f9-4251-b9e3-e82eb5f47600/public" alt="SoftWave Logo" class="h-16 w-auto mb-2">
+    </div>
+
+    <!-- Main Container -->
+    <div id="location-container" class="bg-white bg-opacity-95 rounded-2xl shadow-lg w-full max-w-md p-6 mb-8">
+        <!-- Heading -->
+        <h2 id="location-heading" class="text-teal-600 text-2xl font-bold text-center mb-4">Before we move forward...</h2>
+        
+        <!-- Subtext -->
+        <p id="location-subtext" class="text-gray-700 text-center mb-6">
+            Let's see if we can find a qualified Pulsewave provider near you.
+        </p>
+        
+        <!-- Zip Code Input -->
+        <div id="zip-input-container" class="mb-6">
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-gray-500">
+                    <i data-fa-i2svg=""><svg class="svg-inline--fa fa-location-dot" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path></svg></i>
+                </div>
+                <input type="text" id="zip-code" class="bg-white border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-softwave-blue focus:border-softwave-blue block w-full pl-12 p-4" placeholder="Enter ZIP code" maxlength="5" pattern="[0-9]{5}">
+            </div>
+        </div>
+        
+        <!-- Submit Button -->
+        <button id="check-availability-btn" class="w-full bg-softwave-yellow hover:bg-yellow-400 text-black font-bold py-4 px-4 rounded-full transition duration-300 flex items-center justify-center">
+            Check Availability
+        </button>
+    </div>
+    
+    <!-- Optional: Additional Information -->
+    <div id="additional-info" class="text-white text-center text-sm opacity-70 px-6 max-w-md">
+        <p class="">Your ZIP code helps us find Pulsewave providers in your area who can address your specific needs.</p>
+    </div>
+
+    <script>
+        // Initialize the location functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const zipInput = document.getElementById('zip-code');
+            const checkBtn = document.getElementById('check-availability-btn');
+            
+            // Ensure ZIP code input only accepts numbers
+            zipInput.addEventListener('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+            
+            // Handle the check availability button
+            checkBtn.addEventListener('click', function() {
+                const zipCode = zipInput.value.trim();
+                
+                if (zipCode.length !== 5) {
+                    alert('Please enter a valid 5-digit ZIP code');
+                    return;
+                }
+                
+                // Here you would typically make an API call to check provider availability
+                // This is just a placeholder for the demo
+                checkProviderAvailability(zipCode);
+            });
+            
+            function checkProviderAvailability(zipCode) {
+                // Simulate API call with a loading state
+                checkBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Checking...';
+                checkBtn.disabled = true;
+                
+                // Simulate network delay
+                setTimeout(() => {
+                    // Reset button state
+                    checkBtn.innerHTML = 'Check Availability';
+                    checkBtn.disabled = false;
+                    
+                    // Proceed to the next step in the quiz flow
+                    // This would typically navigate to the next screen or update the current one
+                    alert(`Checking providers near ZIP code: ${zipCode}\nThe app would now show available providers or continue with the qualification process.`);
+                }, 1500);
+            }
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+</body></html>

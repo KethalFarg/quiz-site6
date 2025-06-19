@@ -1,0 +1,162 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+        ::-webkit-scrollbar { display: none;}
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 6px solid transparent;
+            border-top: 6px solid #14b8a6;
+            border-right: 6px solid #FFD54F;
+            border-radius: 50%;
+            animation: spin 1.2s linear infinite;
+            position: relative;
+        }
+        .loading-spinner::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            border: 3px solid transparent;
+            border-top: 3px solid #5eead4;
+            border-bottom: 3px solid #FFF176;
+            border-radius: 50%;
+            animation: spin 2s linear infinite reverse;
+        }
+        .loading-spinner::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px solid transparent;
+            border-top: 2px solid #2dd4bf;
+            border-left: 2px solid #FFEB3B;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .pulse-ring {
+            width: 120px;
+            height: 120px;
+            border: 2px solid #FFD54F;
+            border-radius: 50%;
+            position: absolute;
+            animation: pulse 2s infinite;
+            opacity: 0.4;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.8); opacity: 0.4; }
+            50% { transform: scale(1.2); opacity: 0.1; }
+            100% { transform: scale(0.8); opacity: 0.4; }
+        }
+    </style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "softwave-blue": "#0B3B6B",
+        "softwave-pink": "#FF6B99",
+        "softwave-gray": "#F5F6F8",
+        "softwave-yellow": "#FFD54F"
+      },
+      "fontFamily": {
+        "montserrat": [
+          "Montserrat",
+          "sans-serif"
+        ],
+        "script": [
+          "\"Dancing Script\"",
+          "cursive"
+        ],
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head>
+<body class="font-montserrat bg-gradient-to-b from-[#323743] to-[#0d9c95] min-h-screen flex flex-col items-center justify-start pt-12 px-4 relative">
+    
+    <!-- Background Logo -->
+    <div id="background-logo" class="flex flex-col items-center justify-center mb-8">
+        <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/0b98e6b6-e3f9-4251-b9e3-e82eb5f47600/public" alt="SoftWave Logo" class="h-16 w-auto mb-2">
+    </div>
+
+    <!-- Dark Overlay -->
+    <div id="dark-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-10"></div>
+    
+    <!-- Logo Block -->
+    <div id="logo-block" class="hidden">
+    </div>
+
+    <!-- Main Container -->
+    <div id="loading-container" class="bg-[#0D9488] bg-opacity-95 rounded-2xl shadow-lg w-full max-w-md p-8 mb-8 relative z-20">
+        <!-- Icon Circle -->
+        <div class="flex justify-center mb-6">
+            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center shadow-lg">
+                <i class="fas fa-magnifying-glass text-white text-2xl"></i>
+            </div>
+        </div>
+        
+        <!-- Heading -->
+        <h2 id="loading-heading" class="text-white text-2xl font-bold text-center mb-8">Checking to see if there is a provider near you</h2>
+        
+        <!-- Enhanced Loading Spinner -->
+        <div id="loading-spinner-container" class="flex justify-center items-center relative">
+            <div class="pulse-ring"></div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+    
+    <!-- Optional: Additional Information -->
+    <div id="additional-info" class="text-white text-center text-sm opacity-70 px-6 max-w-md relative z-20">
+        <p>Please wait while we search for qualified Pulsewave providers in your area.</p>
+    </div>
+
+    <script src="quiz-integration.js"></script>
+
+
+
+</body></html>

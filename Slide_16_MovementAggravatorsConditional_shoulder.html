@@ -1,0 +1,191 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script><script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body>
+    <div class="w-full max-w-sm mx-auto bg-gradient-to-b from-[#323743] to-[#0d9c95] min-h-screen" id="main-container">
+        
+        <!-- Header Section -->
+        <div id="header" class="w-full px-4 py-6 bg-transparent">
+    <!-- Top row with back button, section title, and progress -->
+    <div class="flex items-center justify-between mb-6">
+        <!-- Back button -->
+        <button class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+            <i class="text-white text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-arrow-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></i>
+        </button>
+        
+        <!-- Section title -->
+        <h1 class="text-white text-lg font-semibold">Your Condition</h1>
+        
+        <!-- Progress indicator -->
+        <span class="text-white/80 text-sm font-medium">4 of 4</span>
+    </div>
+    
+    <!-- Progress bar with 4 sections -->
+    <div class="flex space-x-2 mb-2 mt-2">
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-white/20 rounded-full h-2"></div>
+    </div>
+</div>
+
+        <!-- Question Section -->
+        <div id="question-section" class="px-6 mt-8">
+            <div class="text-center">
+                <h2 class="text-white text-2xl font-semibold leading-8 mb-2">Which of these movements make your Shoulder pain worse?</h2>
+                <p class="text-white/80 text-base">(select all that apply)</p>
+            </div>
+        </div>
+
+        <!-- Answer Options -->
+        <div id="answer-options" class="px-6 mt-8 space-y-4">
+            <!-- Option 1 -->
+            <div class="answer-option relative" data-option="overhead" onclick="toggleOption(this)">
+                <div class="w-full h-16 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center px-4 cursor-pointer transition-all duration-200 hover:bg-white/15">
+                    <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
+                        <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-hand-point-up" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="hand-point-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M32 32C32 14.3 46.3 0 64 0S96 14.3 96 32V240H32V32zM224 192c0-17.7 14.3-32 32-32s32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V192zm-64-64c17.7 0 32 14.3 32 32v48c0 17.7-14.3 32-32 32s-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm160 96c0-17.7 14.3-32 32-32s32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V224zm-96 88l0-.6c9.4 5.4 20.3 8.6 32 8.6c13.2 0 25.4-4 35.6-10.8c8.7 24.9 32.5 42.8 60.4 42.8c11.7 0 22.6-3.1 32-8.6V352c0 88.4-71.6 160-160 160H162.3c-42.4 0-83.1-16.9-113.1-46.9L37.5 453.5C13.5 429.5 0 396.9 0 363V336c0-35.3 28.7-64 64-64h88c22.1 0 40 17.9 40 40s-17.9 40-40 40H96c-8.8 0-16 7.2-16 16s7.2 16 16 16h56c39.8 0 72-32.2 72-72z"></path></svg></i>
+                    </div>
+                    <span class="text-white text-lg flex-1">Reaching overhead</span>
+                    <div class="check-indicator w-8 h-8 rounded-full bg-transparent flex items-center justify-center opacity-0 transition-all duration-200">
+                        <i class="text-black text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Option 2 -->
+            <div class="answer-option relative" data-option="lifting" onclick="toggleOption(this)">
+                <div class="w-full h-16 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center px-4 cursor-pointer transition-all duration-200 hover:bg-white/15">
+                    <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
+                        <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-dumbbell" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dumbbell" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M96 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V224v64V448c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V384H64c-17.7 0-32-14.3-32-32V288c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32H96V64zm448 0v64h32c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32v64c0 17.7-14.3 32-32 32H544v64c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V288 224 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32zM416 224v64H224V224H416z"></path></svg></i>
+                    </div>
+                    <span class="text-white text-lg flex-1">Lifting heavy objects</span>
+                    <div class="check-indicator w-8 h-8 rounded-full bg-transparent flex items-center justify-center opacity-0 transition-all duration-200">
+                        <i class="text-black text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Option 3 -->
+            <div class="answer-option relative" data-option="sleeping" onclick="toggleOption(this)">
+                <div class="w-full h-16 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center px-4 cursor-pointer transition-all duration-200 hover:bg-white/15">
+                    <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
+                        <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-bed" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bed" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M32 32c17.7 0 32 14.3 32 32V320H288V160c0-17.7 14.3-32 32-32H544c53 0 96 43 96 96V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V416H352 320 64v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"></path></svg></i>
+                    </div>
+                    <span class="text-white text-lg flex-1">Sleeping on your side</span>
+                    <div class="check-indicator w-8 h-8 rounded-full bg-transparent flex items-center justify-center opacity-0 transition-all duration-200">
+                        <i class="text-black text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Option 4 -->
+            <div class="answer-option relative" data-option="behind" onclick="toggleOption(this)">
+                <div class="w-full h-16 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center px-4 cursor-pointer transition-all duration-200 hover:bg-white/15">
+                    <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
+                        <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-hand-back-fist" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="hand-back-fist" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M144 0C117.5 0 96 21.5 96 48V96v28.5V176c0 8.8-7.2 16-16 16s-16-7.2-16-16V149.3l-9 7.5C40.4 169 32 187 32 206V244c0 38 16.9 74 46.1 98.3L128 384v96c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V374.7c46.9-19 80-65 80-118.7V176 160 144c0-26.5-21.5-48-48-48c-12.4 0-23.6 4.7-32.1 12.3C350 83.5 329.3 64 304 64c-12.4 0-23.6 4.7-32.1 12.3C270 51.5 249.3 32 224 32c-12.4 0-23.6 4.7-32.1 12.3C190 19.5 169.3 0 144 0z"></path></svg></i>
+                    </div>
+                    <span class="text-white text-lg flex-1">Reaching behind your back</span>
+                    <div class="check-indicator w-8 h-8 rounded-full bg-transparent flex items-center justify-center opacity-0 transition-all duration-200">
+                        <i class="text-black text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Option 5 -->
+            <div class="answer-option relative" data-option="pushing" onclick="toggleOption(this)">
+                <div class="w-full h-16 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center px-4 cursor-pointer transition-all duration-200 hover:bg-white/15">
+                    <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
+                        <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-arrows-left-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrows-left-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M406.6 374.6l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224l-293.5 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288l293.5 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"></path></svg></i>
+                    </div>
+                    <span class="text-white text-lg flex-1">Pushing or pulling</span>
+                    <div class="check-indicator w-8 h-8 rounded-full bg-transparent flex items-center justify-center opacity-0 transition-all duration-200">
+                        <i class="text-black text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Next Button - Initially Hidden -->
+        <div id="next-button-container" class="fixed bottom-6 left-4 right-4 hidden">
+            <button id="next-button" class="w-full bg-white text-[#0d9c95] px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02]">
+                Next
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let selectedOptions = new Set();
+        
+        function toggleOption(element) {
+            const checkIndicator = element.querySelector('.check-indicator');
+            const isSelected = element.classList.contains('selected');
+            const optionText = element.querySelector('span').textContent;
+            
+            if (isSelected) {
+                element.classList.remove('selected');
+                checkIndicator.classList.remove('bg-yellow-400', 'opacity-100');
+                checkIndicator.classList.add('bg-transparent', 'opacity-0');
+                selectedOptions.delete(optionText);
+            } else {
+                element.classList.add('selected');
+                checkIndicator.classList.remove('bg-transparent', 'opacity-0');
+                checkIndicator.classList.add('bg-yellow-400', 'opacity-100');
+                selectedOptions.add(optionText);
+            }
+            
+            // Show/hide Next button based on selections
+            const nextButtonContainer = document.getElementById('next-button-container');
+            if (selectedOptions.size > 0) {
+                nextButtonContainer.classList.remove('hidden');
+            } else {
+                nextButtonContainer.classList.add('hidden');
+            }
+        }
+    </script>
+
+<script src="quiz-integration.js"></script>
+
+
+</body></html>

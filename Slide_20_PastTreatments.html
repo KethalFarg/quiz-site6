@@ -1,0 +1,203 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script><script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body>
+    <div class="w-full max-w-sm mx-auto bg-gradient-to-b from-[#323743] to-[#0d9c95] min-h-screen" id="main-container">
+        
+        <!-- Header Section -->
+        <div id="header" class="w-full px-4 py-6 bg-transparent">
+    <!-- Top row with back button, section title, and progress -->
+    <div class="flex items-center justify-between mb-6">
+        <!-- Back button -->
+        <button class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+            <i class="text-white text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-arrow-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></i>
+        </button>
+        
+        <!-- Section title -->
+        <h1 class="text-white text-lg font-semibold">Health Impact</h1>
+        
+        <!-- Progress indicator -->
+        <span class="text-white/80 text-sm font-medium">3 of 7</span>
+    </div>
+    
+    <!-- Progress bar with 4 sections -->
+    <div class="flex space-x-2 mb-2 mt-2">
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-white/20 rounded-full h-2"></div>
+    </div>
+</div>
+
+        <!-- Question Section -->
+        <div id="question-section" class="px-4 mt-8">
+            <div class="text-center mb-6">
+                <h2 class="text-white text-2xl font-semibold leading-8 mb-3">Have you tried any previous {{jointselected}} treatments?</h2>
+                <p class="text-white/80 text-base">(Select all that apply)</p>
+            </div>
+
+            <!-- Options Grid - 2x2 Layout -->
+            <div id="options-grid" class="grid grid-cols-2 gap-4 mb-6">
+                
+                <!-- Medication Option -->
+                <div class="option-tile bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex flex-col items-center text-center space-y-3 transition-all duration-200 hover:bg-white/20 min-h-[120px] relative">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+                        <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-pills" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pills" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M112 96c-26.5 0-48 21.5-48 48V256h96V144c0-26.5-21.5-48-48-48zM0 144C0 82.1 50.1 32 112 32s112 50.1 112 112V368c0 61.9-50.1 112-112 112S0 429.9 0 368V144zM554.9 399.4c-7.1 12.3-23.7 13.1-33.8 3.1L333.5 214.9c-10-10-9.3-26.7 3.1-33.8C360 167.7 387.1 160 416 160c88.4 0 160 71.6 160 160c0 28.9-7.7 56-21.1 79.4zm-59.5 59.5C472 472.3 444.9 480 416 480c-88.4 0-160-71.6-160-160c0-28.9 7.7-56 21.1-79.4c7.1-12.3 23.7-13.1 33.8-3.1L498.5 425.1c10 10 9.3 26.7-3.1 33.8z"></path></svg></i>
+                    </div>
+                    <span class="text-white text-sm font-medium">Medication</span>
+                    <div class="absolute top-2 right-2 w-5 h-5 bg-[#FECA35] rounded-full items-center justify-center hidden selection-indicator">
+                        <i class="text-black text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                </div>
+
+                <!-- Cortisone Shots Option -->
+                <div class="option-tile bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex flex-col items-center text-center space-y-3 transition-all duration-200 hover:bg-white/20 min-h-[120px] relative">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center">
+                        <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-syringe" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="syringe" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M441 7l32 32 32 32c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-15-15L417.9 128l55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-72-72L295 73c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l55 55L422.1 56 407 41c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0zM210.3 155.7l61.1-61.1c.3 .3 .6 .7 1 1l16 16 56 56 56 56 16 16c.3 .3 .6 .6 1 1l-191 191c-10.5 10.5-24.7 16.4-39.6 16.4H97.9L41 505c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l57-57V325.3c0-14.9 5.9-29.1 16.4-39.6l43.3-43.3 57 57c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6l-57-57 41.4-41.4 57 57c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6l-57-57z"></path></svg></i>
+                    </div>
+                    <span class="text-white text-sm font-medium">Cortisone shots</span>
+                    <div class="absolute top-2 right-2 w-5 h-5 bg-[#FECA35] rounded-full items-center justify-center hidden selection-indicator">
+                        <i class="text-black text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                </div>
+
+                <!-- Physical Therapy Option -->
+                <div class="option-tile bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex flex-col items-center text-center space-y-3 transition-all duration-200 hover:bg-white/20 min-h-[120px] relative">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center">
+                        <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-dumbbell" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dumbbell" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M96 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V224v64V448c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V384H64c-17.7 0-32-14.3-32-32V288c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32H96V64zm448 0v64h32c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32v64c0 17.7-14.3 32-32 32H544v64c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V288 224 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32zM416 224v64H224V224H416z"></path></svg></i>
+                    </div>
+                    <span class="text-white text-sm font-medium">Physical Therapy</span>
+                    <div class="absolute top-2 right-2 w-5 h-5 bg-[#FECA35] rounded-full items-center justify-center hidden selection-indicator">
+                        <i class="text-black text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                </div>
+
+                <!-- Surgery Option -->
+                <div class="option-tile bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex flex-col items-center text-center space-y-3 transition-all duration-200 hover:bg-white/20 min-h-[120px] relative">
+                    <div class="w-12 h-12 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center">
+                        <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-user-doctor" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-doctor" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-96 55.2C54 332.9 0 401.3 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7c0-81-54-149.4-128-171.1V362c27.6 7.1 48 32.2 48 62v40c0 8.8-7.2 16-16 16H336c-8.8 0-16-7.2-16-16s7.2-16 16-16V424c0-17.7-14.3-32-32-32s-32 14.3-32 32v24c8.8 0 16 7.2 16 16s-7.2 16-16 16H256c-8.8 0-16-7.2-16-16V424c0-29.8 20.4-54.9 48-62V304.9c-6-.6-12.1-.9-18.3-.9H178.3c-6.2 0-12.3 .3-18.3 .9v65.4c23.1 6.9 40 28.3 40 53.7c0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.4 16.9-46.8 40-53.7V311.2zM144 448a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"></path></svg></i>
+                    </div>
+                    <span class="text-white text-sm font-medium">Surgery</span>
+                    <div class="absolute top-2 right-2 w-5 h-5 bg-[#FECA35] rounded-full items-center justify-center hidden selection-indicator">
+                        <i class="text-black text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Row - Other and None -->
+            <div class="grid grid-cols-2 gap-4">
+                
+                <!-- Other Option -->
+                <div class="option-tile bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex flex-col items-center text-center space-y-3 transition-all duration-200 hover:bg-white/20 min-h-[120px] relative">
+                    <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center">
+                        <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-ellipsis" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"></path></svg></i>
+                    </div>
+                    <span class="text-white text-sm font-medium">Other</span>
+                    <div class="absolute top-2 right-2 w-5 h-5 bg-[#FECA35] rounded-full items-center justify-center hidden selection-indicator">
+                        <i class="text-black text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                </div>
+
+                <!-- None Option -->
+                <div class="option-tile bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex flex-col items-center text-center space-y-3 transition-all duration-200 hover:bg-white/20 min-h-[120px] relative">
+                    <div class="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center">
+                        <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-xmark" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path></svg></i>
+                    </div>
+                    <span class="text-white text-sm font-medium">None</span>
+                    <div class="absolute top-2 right-2 w-5 h-5 bg-[#FECA35] rounded-full items-center justify-center hidden selection-indicator">
+                        <i class="text-black text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Next Button - Initially Hidden -->
+        <div id="next-button-container" class="fixed bottom-6 left-4 right-4 hidden">
+            <button id="next-button" class="w-full bg-white text-[#0d9c95] px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02]">
+                Next
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let selectedOptions = new Set();
+        
+        document.querySelectorAll('.option-tile').forEach(tile => {
+            tile.addEventListener('click', function() {
+                const indicator = this.querySelector('.selection-indicator');
+                const isSelected = !indicator.classList.contains('hidden');
+                const optionText = this.querySelector('span').textContent;
+                
+                if (isSelected) {
+                    indicator.classList.add('hidden');
+                    indicator.classList.remove('flex');
+                    this.classList.remove('bg-white/30', 'border-white/60');
+                    this.classList.add('bg-white/10', 'border-white/20');
+                    selectedOptions.delete(optionText);
+                } else {
+                    indicator.classList.remove('hidden');
+                    indicator.classList.add('flex');
+                    this.classList.remove('bg-white/10', 'border-white/20');
+                    this.classList.add('bg-white/30', 'border-white/60');
+                    selectedOptions.add(optionText);
+                }
+                
+                // Show/hide Next button based on selections
+                const nextButtonContainer = document.getElementById('next-button-container');
+                if (selectedOptions.size > 0) {
+                    nextButtonContainer.classList.remove('hidden');
+                } else {
+                    nextButtonContainer.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+</body></html>

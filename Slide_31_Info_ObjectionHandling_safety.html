@@ -1,0 +1,155 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "medical-teal": "#0F9890",
+        "softwave-yellow": "#FFD700"
+      },
+      "fontFamily": {
+        "montserrat": [
+          "Montserrat",
+          "sans-serif"
+        ],
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body class="font-montserrat bg-gradient-to-b from-gray-100 to-gray-200">
+    <div id="quiz-container" class="max-w-md mx-auto relative h-[100vh] flex flex-col">
+        <!-- Top Header Banner -->
+        <div id="header-banner" class="bg-gradient-to-r from-[#323743] to-[#0D9C95] pt-6 pb-8 px-4 relative">
+            <!-- Back Button -->
+            <div id="back-button" class="absolute top-6 left-4 z-10">
+                <button class="w-8 h-8 flex items-center justify-center">
+                    <i class="text-gray-300 text-xl" data-fa-i2svg=""><svg class="svg-inline--fa fa-arrow-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></i>
+                </button>
+            </div>
+            
+            <div class="text-center pt-2">
+                <h1 class="text-white font-bold text-3xl leading-tight">
+                    Is Pulsewave<br>Therapy Safe?
+                </h1>
+            </div>
+        </div>
+        
+        <!-- Main Content Section -->
+        <div id="content-section" class="flex-grow px-4 py-6 flex flex-col">
+            <!-- Icon Section -->
+            <div id="icon-section" class="text-center mb-8">
+                <div class="w-16 h-16 bg-softwave-yellow rounded-full flex items-center justify-center mx-auto">
+                    <i class="text-gray-800 text-2xl" data-fa-i2svg=""><svg class="svg-inline--fa fa-shield-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shield-check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><g class="missing"><path fill="currentColor" d="M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z"></path><circle fill="currentColor" cx="256" cy="364" r="28"><animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="r" values="28;14;28;28;14;28;"></animate><animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="opacity" values="1;0;1;1;0;1;"></animate></circle><path fill="currentColor" opacity="1" d="M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z"><animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="opacity" values="1;0;0;0;0;1;"></animate></path><path fill="currentColor" opacity="0" d="M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z"><animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="opacity" values="0;0;1;1;0;0;"></animate></path></g></svg></i>
+                </div>
+            </div>
+            
+            <!-- Safety Cards -->
+            <div id="safety-cards-section" class="space-y-4 mb-8">
+                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 flex items-start space-x-3">
+                    <div class="w-6 h-6 rounded-full bg-purple-100 border-2 border-purple-400 flex items-center justify-center flex-shrink-0 mt-1">
+                        <i class="text-purple-600 text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base mb-1">FDA-cleared</h3>
+                        <p class="text-gray-700 text-sm">and used by top sports medicine doctors</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 flex items-start space-x-3">
+                    <div class="w-6 h-6 rounded-full bg-purple-100 border-2 border-purple-400 flex items-center justify-center flex-shrink-0 mt-1">
+                        <i class="text-purple-600 text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base mb-1">Non-invasive</h3>
+                        <p class="text-gray-700 text-sm">with no known side effects.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 flex items-start space-x-3">
+                    <div class="w-6 h-6 rounded-full bg-purple-100 border-2 border-purple-400 flex items-center justify-center flex-shrink-0 mt-1">
+                        <i class="text-purple-600 text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base mb-1">Over 1 Million treatments</h3>
+                        <p class="text-gray-700 text-sm">this therapy type has treated countless {{jointselected}} patients and has nearly 20 years of supporting research</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Statistics -->
+            <div id="stats-section" class="mb-8 text-center">
+                <div class="mb-2">
+                    <span class="text-6xl font-bold text-gray-900" style="font-family: 'Brush Script MT', cursive;">94%</span>
+                </div>
+                <p class="text-gray-700 font-medium text-base">
+                    of patients report<br>noticeable pain relief.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Next Button -->
+        <div id="next-button" class="mb-8 px-8">
+            <button class="bg-softwave-yellow text-black font-bold text-base w-full py-3 rounded-full flex items-center justify-center shadow-md">
+                NEXT
+                <i class="ml-2 text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-play" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path></svg></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nextButton = document.getElementById('next-button').querySelector('button');
+            const backButton = document.getElementById('back-button').querySelector('button');
+            
+            nextButton.addEventListener('click', function() {
+                console.log('Navigating to next screen');
+            });
+            
+            backButton.addEventListener('click', function() {
+                console.log('Navigating back');
+            });
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+</body></html>

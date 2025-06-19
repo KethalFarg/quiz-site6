@@ -1,0 +1,149 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+        ::-webkit-scrollbar { display: none;}
+        .location-marker {
+            font-size: 4rem;
+            color: white;
+            animation: popIn 0.8s ease-out;
+        }
+        @keyframes popIn {
+            0% { 
+                transform: scale(0) translateY(20px);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2) translateY(-10px);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+        .bounce-gentle {
+            animation: bounceGentle 2s ease-in-out infinite;
+        }
+        @keyframes bounceGentle {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        .text-animate {
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "softwave-blue": "#0B3B6B",
+        "softwave-pink": "#FF6B99",
+        "softwave-gray": "#F5F6F8",
+        "softwave-yellow": "#FFD54F"
+      },
+      "fontFamily": {
+        "montserrat": [
+          "Montserrat",
+          "sans-serif"
+        ],
+        "script": [
+          "\"Dancing Script\"",
+          "cursive"
+        ],
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body class="font-montserrat bg-gradient-to-b from-[#323743] to-[#0d9c95] min-h-screen flex flex-col items-center justify-start pt-12 px-4 relative">
+    
+    <!-- Background Logo -->
+    <div id="background-logo" class="flex flex-col items-center justify-center mb-8">
+        <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/0b98e6b6-e3f9-4251-b9e3-e82eb5f47600/public" alt="SoftWave Logo" class="h-16 w-auto mb-2">
+    </div>
+
+    <!-- Dark Overlay -->
+    <div id="dark-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-10"></div>
+    
+    <!-- Main Container -->
+    <div id="success-container" class="bg-teal-600 rounded-2xl shadow-lg w-full max-w-md p-8 mb-8 relative z-20">
+    <!-- Animated Location Marker -->
+    <div id="location-marker" class="flex justify-center mb-6">
+        <i class="location-marker bounce-gentle text-white" data-fa-i2svg=""><svg class="svg-inline--fa fa-location-dot" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path></svg></i>
+    </div>
+    
+    <!-- Heading -->
+    <h2 id="success-heading" class="text-white text-3xl font-bold text-center mb-4 text-animate">Congratulations!</h2>
+    
+    <!-- Subtext -->
+    <p id="success-subtext" class="text-white text-lg text-center font-medium text-animate mb-6">We found a PulseWave provider close to you!</p>
+    
+    <!-- Continue Button -->
+    <button id="continue-button" class="w-full bg-white text-teal-600 font-bold py-4 px-6 rounded-full text-lg hover:bg-gray-50 transition-colors duration-200">
+        Continue
+    </button>
+</div>
+    
+    <!-- Optional: Additional Information -->
+    <div id="additional-info" class="text-white text-center text-sm opacity-70 px-6 max-w-md relative z-20">
+        <p class="">You're one step closer to pain-free living with advanced Pulsewave therapy.</p>
+    </div>
+
+    <script src="quiz-integration.js"></script>
+
+
+
+</body></html>

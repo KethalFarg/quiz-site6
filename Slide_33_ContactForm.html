@@ -1,0 +1,166 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "softwave-blue": "#0B3B6B",
+        "softwave-pink": "#FF6B99",
+        "softwave-gray": "#F5F6F8",
+        "softwave-yellow": "#FFD700",
+        "softwave-purple": "#14B8A6",
+        "softwave-light-purple": "#E6FFFA"
+      },
+      "fontFamily": {
+        "montserrat": [
+          "Montserrat",
+          "sans-serif"
+        ],
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body class="font-montserrat bg-gradient-to-b from-[#323743] to-[#0d9c95] min-h-screen">
+    <div id="quiz-container" class="max-w-md mx-auto h-full">
+        <!-- Header Bar -->
+        <div id="header" class="bg-transparent py-4 px-5 flex justify-center items-center">
+            <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/0b98e6b6-e3f9-4251-b9e3-e82eb5f47600/public" alt="SoftWave Therapy Logo" class="h-16 w-auto">
+        </div>
+        
+        <!-- Centered Icon -->
+        <div id="icon-container" class="flex justify-center -mt-1 mb-4">
+</div>
+        
+        <!-- Form Card -->
+        <div id="form-card" class="bg-white rounded-2xl mx-4 p-6 shadow-lg mt-4">
+            <div id="form-header" class="mb-6 text-center">
+                <h2 class="text-xl font-bold text-softwave-blue mb-2">Let's create your report!</h2>
+                <p class="text-gray-600 text-sm">So we can create a customized {{jointselected}} report based on real clinical data</p>
+            </div>
+            
+            <!-- Instruction Banner -->
+            <div id="instruction-banner" class="bg-softwave-light-purple rounded-lg p-3 mb-6 flex items-start">
+                <i class="text-softwave-purple mt-1 mr-3" data-fa-i2svg=""><svg class="svg-inline--fa fa-circle-exclamation" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-exclamation" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path></svg></i>
+                <p class="text-sm text-gray-700">Please answer with complete, accurate information to ensure your report reflects your specific condition.</p>
+            </div>
+            
+            <!-- Form Fields -->
+            <div id="form-fields" class="mb-6 space-y-4">
+                <div id="first-name-field" class="relative">
+                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-softwave-purple" placeholder="First Name">
+                </div>
+                <div id="last-name-field" class="relative">
+                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-softwave-purple" placeholder="Last Name">
+                </div>
+                <div id="email-field" class="relative">
+                    <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-softwave-purple" placeholder="Email">
+                </div>
+            </div>
+            
+            <!-- Consent Checkbox -->
+            <div id="consent-section" class="bg-gray-100 rounded-lg p-4 mb-6">
+                <div class="flex items-start">
+                    <input type="checkbox" id="consent" class="mt-1 mr-3">
+                    <label for="consent" class="text-xs text-gray-700">
+                        I understand that by submitting this form, I consent to receive communications from betterjoint.com and their affiliated providers regarding my condition and treatment options. My information will be handled according to the Privacy Policy, and I can opt-out at any time. I also confirm that all information provided is accurate and complete.
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Call to Action Button -->
+            <div id="cta-section" class="">
+                <button id="generate-btn" class="w-full bg-softwave-purple text-white font-bold py-4 px-6 rounded-full hover:bg-opacity-90 transition-all">
+                    Generate my profile &amp; report!
+                </button>
+            </div>
+        </div>
+        
+        <!-- Bottom Spacing -->
+        <div class="h-8"></div>
+    </div>
+
+    <script>
+        // Form validation and submission handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateBtn = document.getElementById('generate-btn');
+            const consentCheckbox = document.getElementById('consent');
+            const firstNameInput = document.querySelector('#first-name-field input');
+            const lastNameInput = document.querySelector('#last-name-field input');
+            const emailInput = document.querySelector('#email-field input');
+            
+            generateBtn.addEventListener('click', function() {
+                // Basic validation
+                if (!firstNameInput.value) {
+                    alert('Please enter your first name');
+                    return;
+                }
+                
+                if (!lastNameInput.value) {
+                    alert('Please enter your last name');
+                    return;
+                }
+                
+                if (!emailInput.value || !isValidEmail(emailInput.value)) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+                
+                if (!consentCheckbox.checked) {
+                    alert('Please agree to the consent statement');
+                    return;
+                }
+                
+                // If all validation passes, proceed
+                alert('Form submitted successfully! Your personalized report will be generated.');
+                // Here you would typically submit the form data to your backend
+            });
+            
+            function isValidEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+</body></html>

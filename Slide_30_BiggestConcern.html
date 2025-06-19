@@ -1,0 +1,143 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script><script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body>
+    <div class="w-full max-w-sm mx-auto bg-gradient-to-b from-[#323743] to-[#0d9c95] min-h-screen" id="main-container">
+        
+        <!-- Header Section -->
+        <div id="header" class="w-full px-4 py-6 bg-transparent">
+    <!-- Top row with back button, section title, and progress -->
+    <div class="flex items-center justify-between mb-6">
+        <!-- Back button -->
+        <button class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+            <i class="text-white text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-arrow-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></i>
+        </button>
+        
+        <!-- Section title -->
+        <h1 class="text-white text-lg font-semibold">Your Priorities</h1>
+        
+        <!-- Progress indicator -->
+        <span class="text-white/80 text-sm font-medium">2 of 3</span>
+    </div>
+    
+    <!-- Progress bar with 4 sections -->
+    <div class="flex space-x-2 mb-2 mt-2">
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-white/20 rounded-full h-2"></div>
+    </div>
+</div>
+
+        <!-- Question Section -->
+        <div id="question-section" class="px-6 pt-8 pb-6">
+            <div class="text-center">
+                <h2 class="text-white text-2xl font-medium leading-tight mb-4">
+                    What's your biggest concern about trying a new {{jointselected}} treatment?
+                </h2>
+            </div>
+        </div>
+
+        <!-- Answer Options -->
+        <div id="answer-options" class="px-6 space-y-4">
+            
+            <!-- Cost Option -->
+            <button id="cost-option" class="w-full h-16 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center px-6 hover:bg-white/20 transition-all duration-200 active:scale-95" data-name="concern" data-value="Cost">
+                <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-4">
+                    <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-dollar-sign" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dollar-sign" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M160 0c17.7 0 32 14.3 32 32V67.7c1.6 .2 3.1 .4 4.7 .7c.4 .1 .7 .1 1.1 .2l48 8.8c17.4 3.2 28.9 19.9 25.7 37.2s-19.9 28.9-37.2 25.7l-47.5-8.7c-31.3-4.6-58.9-1.5-78.3 6.2s-27.2 18.3-29 28.1c-2 10.7-.5 16.7 1.2 20.4c1.8 3.9 5.5 8.3 12.8 13.2c16.3 10.7 41.3 17.7 73.7 26.3l2.9 .8c28.6 7.6 63.6 16.8 89.6 33.8c14.2 9.3 27.6 21.9 35.9 39.5c8.5 17.9 10.3 37.9 6.4 59.2c-6.9 38-33.1 63.4-65.6 76.7c-13.7 5.6-28.6 9.2-44.4 11V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.1c-.4-.1-.9-.1-1.3-.2l-.2 0 0 0c-24.4-3.8-64.5-14.3-91.5-26.3c-16.1-7.2-23.4-26.1-16.2-42.2s26.1-23.4 42.2-16.2c20.9 9.3 55.3 18.5 75.2 21.6c31.9 4.7 58.2 2 76-5.3c16.9-6.9 24.6-16.9 26.8-28.9c1.9-10.6 .4-16.7-1.3-20.4c-1.9-4-5.6-8.4-13-13.3c-16.4-10.7-41.5-17.7-74-26.3l-2.8-.7 0 0C119.4 279.3 84.4 270 58.4 253c-14.2-9.3-27.5-22-35.8-39.6c-8.4-17.9-10.1-37.9-6.1-59.2C23.7 116 52.3 91.2 84.8 78.3c13.3-5.3 27.9-8.9 43.2-11V32c0-17.7 14.3-32 32-32z"></path></svg></i>
+                </div>
+                <span class="text-white text-lg font-medium">Cost</span>
+            </button>
+
+            <!-- Effectiveness Option -->
+            <button id="effectiveness-option" class="w-full h-16 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center px-6 hover:bg-white/20 transition-all duration-200 active:scale-95" data-name="concern" data-value="Effectiveness">
+                <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-4">
+                    <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-chart-line" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chart-line" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"></path></svg></i>
+                </div>
+                <span class="text-white text-lg font-medium">Effectiveness</span>
+            </button>
+
+            <!-- Time Option -->
+            <button id="time-option" class="w-full h-16 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center px-6 hover:bg-white/20 transition-all duration-200 active:scale-95" data-name="concern" data-value="Time">
+                <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-4">
+                    <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-clock" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="clock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"></path></svg></i>
+                </div>
+                <span class="text-white text-lg font-medium">Time</span>
+            </button>
+
+            <!-- Safety Option -->
+            <button id="safety-option" class="w-full h-16 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center px-6 hover:bg-white/20 transition-all duration-200 active:scale-95" data-name="concern" data-value="Safety">
+                <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-4">
+                    <i class="text-white text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-shield-halved" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shield-halved" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"></path></svg></i>
+                </div>
+                <span class="text-white text-lg font-medium">Safety</span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+        const options = document.querySelectorAll('#answer-options button');
+        let selectedOption = null;
+
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                if (selectedOption) {
+                    selectedOption.classList.remove('bg-white/30', 'border-white/40');
+                    selectedOption.classList.add('bg-white/10', 'border-white/20');
+                }
+                
+                this.classList.remove('bg-white/10', 'border-white/20');
+                this.classList.add('bg-white/30', 'border-white/40');
+                selectedOption = this;
+            });
+        });
+    </script>
+
+<script src="quiz-integration.js"></script>
+
+
+</body></html>

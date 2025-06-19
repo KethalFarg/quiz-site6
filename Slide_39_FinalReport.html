@@ -1,0 +1,344 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "primary": "#6366F1",
+        "accent": "#F8FAFC",
+        "warning": "#F59E0B",
+        "success": "#059669",
+        "purple": "#8B5CF6",
+        "dark": "#1E293B"
+      },
+      "fontFamily": {
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head>
+<body class="bg-gradient-to-br from-slate-50 to-indigo-50 font-sans">
+
+    <!-- Header -->
+    <header id="header" class="bg-gradient-to-br from-slate-700 to-teal-600 text-white p-5 text-center">
+        <h1 class="text-lg font-bold">Pulsewave Treatment Assessment</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="p-5 space-y-5">
+        
+        <!-- Info Banner -->
+        <section id="info-banner" class="bg-teal-600/10 border border-teal-300/20 rounded-xl p-4 shadow-sm">
+            <div class="flex items-start space-x-3">
+                <div class="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="fa-solid fa-info text-white text-sm"></i>
+                </div>
+                <div class="text-sm text-teal-900">
+                    <p class="font-medium">These predictions are based on similar clinical cases.</p>
+                    <p class="mt-1">Only a full evaluation by a provider is required to determine full eligibility and likelihood of success. Individual results may vary.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Score Card -->
+        <section id="score-card" class="bg-white rounded-xl p-6 border border-gray-100 text-center shadow-lg">
+            <div class="relative w-24 h-24 mx-auto mb-4">
+                <svg class="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" stroke="#E2E8F0" stroke-width="8" fill="none"></circle>
+                    <circle cx="50" cy="50" r="40" stroke="#0D9488" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-linecap="round"></circle>
+                </svg>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-2xl font-bold text-teal-600">77</span>
+                </div>
+            </div>
+            <h2 class="text-lg font-bold text-gray-800 mb-1">Pulsewave Success Score</h2>
+            <p class="text-sm text-gray-600 mb-3">Based on similar cases</p>
+            <div class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-medium inline-block shadow-md">
+                Results Outlook: Good
+            </div>
+        </section>
+
+        <!-- AI Analysis Section -->
+        <section id="ai-analysis" class="bg-gradient-to-br from-slate-700 to-teal-600 rounded-xl p-6 text-white shadow-lg">
+            <div class="flex items-center space-x-3 mb-4">
+                <div class="w-10 h-10 bg-yellow-400 rounded-xl flex items-center justify-center">
+                    <i class="fa-solid fa-brain text-slate-800 text-lg"></i>
+                </div>
+                <h3 class="text-xl font-bold">AI Success Estimate</h3>
+            </div>
+            
+            <p class="text-white/90 leading-relaxed mb-4">
+                <strong>(Name)</strong>, similar cases see <span class="text-yellow-300 font-medium">good results</span>
+            </p>
+            
+            <p class="text-white/90 leading-relaxed">
+                (GPT SUMMARY) You have significant knee pain that has persisted for 13 months. Your condition is gradually worsening. Proper treatment could help you get back to getting around with less pain.
+            </p>
+        </section>
+
+        <!-- Success Estimate -->
+        <!-- Section deleted as requested -->
+
+        <!-- Treatment Metrics -->
+        <section id="treatment-metrics" class="space-y-4">
+            <h3 class="text-lg font-bold text-gray-800 mb-4">Treatment Metrics</h3>
+            
+            <!-- Estimated Results -->
+            <div id="estimated-results" class="bg-white rounded-xl p-4 border border-gray-100 shadow-lg">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-gradient-to-r from-slate-600 to-slate-700 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-chart-line text-white text-sm"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-medium text-gray-800">Estimated Results</h4>
+                        <p class="text-sm text-gray-600">60-80% pain reduction in 4-6 sessions</p>
+                    </div>
+                    <span class="bg-gradient-to-r from-gray-100 to-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Est.</span>
+                </div>
+            </div>
+
+            <!-- Treatment Time -->
+            <div id="treatment-time" class="bg-white rounded-xl p-4 border border-gray-100 shadow-lg">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-clock text-white text-sm"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-medium text-gray-800">Treatment Time</h4>
+                        <p class="text-sm text-gray-600">15-20 minutes each</p>
+                    </div>
+                    <span class="bg-gradient-to-r from-amber-100 to-orange-100 text-amber-700 px-3 py-1 rounded-full text-xs font-medium">Quick</span>
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div id="location" class="bg-white rounded-xl p-4 border border-gray-100 shadow-lg">
+    <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 bg-gradient-to-r from-slate-700 to-teal-600 rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-map-marker-alt text-white text-sm"></i>
+        </div>
+        <div class="flex-1">
+            <h4 class="font-medium text-gray-800">Nearby Location</h4>
+            <p class="text-sm text-gray-600">Location near - (zipcode)</p>
+        </div>
+    </div>
+</div>
+        </section>
+
+        <!-- CTA Button -->
+        <section id="cta-section" class="pt-2">
+            <button class="w-full bg-gradient-to-r from-yellow-400 to-amber-400 hover:from-yellow-500 hover:to-amber-500 text-gray-800 font-bold py-4 px-6 rounded-xl flex items-center justify-center space-x-2 shadow-lg transform hover:scale-105 transition-all duration-200">
+                <span>Get trial treatment</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </section>
+
+        <!-- Progress Chart -->
+        <div class="max-w-sm mx-auto rounded-xl shadow ring-1 ring-gray-200 p-4" id="progress-chart">
+            <h2 class="text-lg font-semibold text-center mb-2 text-gray-800">
+                Potential Mobility Assessment
+            </h2>
+
+            <div class="relative h-56">
+                <svg id="chart" viewBox="0 0 360 220" class="w-full h-full">
+                    <line x1="30" y1="10" x2="30" y2="200" stroke="#94A3B8" stroke-width="1.5"></line>
+                    <line x1="30" y1="200" x2="340" y2="200" stroke="#94A3B8" stroke-width="1.5"></line>
+                    <text x="12" y="110" transform="rotate(-90,12,110)" class="text-xs fill-gray-500">Improvement</text>
+                    <text x="185" y="215" class="text-xs fill-gray-500">Treatment&nbsp;Period</text>
+                </svg>
+            </div>
+
+            <ul id="legend" class="mt-4 space-y-1 text-sm"></ul>
+        </div>
+
+        <!-- Recommended Steps -->
+        <section id="recommended-steps" class="bg-white rounded-xl p-5 border border-gray-100 shadow-lg">
+            <div class="flex items-center space-x-3 mb-4">
+                <div class="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-lightbulb text-yellow-600 text-sm"></i>
+                </div>
+                <h3 class="font-bold text-gray-800">Recommended Next Steps:</h3>
+            </div>
+            
+            <div class="space-y-3">
+                <div class="flex items-start space-x-3">
+                    <span class="bg-teal-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">1</span>
+                    <div class="p-4 bg-teal-500 rounded-xl text-white shadow-md flex-1">
+                        <h4 class="font-medium">Initial Consultation</h4>
+                        <p class="text-sm opacity-90">Comprehensive evaluation of your condition and medical history to identify your specific needs.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <span class="bg-teal-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">2</span>
+                    <div class="p-4 bg-teal-600 rounded-xl text-white shadow-md flex-1">
+                        <h4 class="font-medium">Diagnostic Mapping</h4>
+                        <p class="text-sm opacity-90">Precise identification of pain points and affected tissues to target treatments effectively.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <span class="bg-teal-700 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">3</span>
+                    <div class="p-4 bg-teal-700 rounded-xl text-white shadow-md flex-1">
+                        <h4 class="font-medium">Trial Softwave Treatment</h4>
+                        <p class="text-sm opacity-90">Experience the treatment first-hand with your first targeted treatment session.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <span class="bg-teal-800 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">4</span>
+                    <div class="p-4 bg-teal-800 rounded-xl text-white shadow-md flex-1">
+                        <h4 class="font-medium">Personalized Plan</h4>
+                        <p class="text-sm opacity-90">Custom treatment schedule based on your specific needs to achieve optimal pain reduction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Offer -->
+        <section id="special-offer" class="bg-gradient-to-r from-gray-900 to-gray-700 text-white rounded-2xl p-6 shadow-lg">
+            <div class="text-center mb-4">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3">
+                    <i class="fa-solid fa-gift text-gray-700 text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-2">You've Unlocked a Special New Patient Package!</h3>
+                <p class="text-gray-200 mb-4">You qualify for a new patient special offer — normally $297, now just $79</p>
+            </div>
+            
+            <div class="bg-white bg-opacity-20 rounded-xl p-4 mb-4">
+                <h4 class="font-bold mb-3">Includes:</h4>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check mr-3"></i>
+                        <span>Full Consultation</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check mr-3"></i>
+                        <span>Joint health examination</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check mr-3"></i>
+                        <span>Diagnostic Mapping</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check mr-3"></i>
+                        <span>Complimentary Trial Treatment</span>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-gray-200 text-sm mb-4 text-center">Spots are limited. (location name) will review your report and contact you shortly.</p>
+            
+            <button class="w-full bg-white text-gray-700 font-bold py-4 rounded-xl text-lg hover:bg-gray-100 transition-colors">
+                Schedule My Trial Treatment
+            </button>
+        </section>
+
+    </main>
+
+    <script>
+        /* -------- knee movements w/ colours & white icons -------- */
+        const movements = [
+          { name:'Going up or down stairs', color:'#0ea5e9',
+            icon:`<svg viewBox="0 0 24 24" class="w-3 h-3" fill="white"><path d="M3 13h6v-2h2V9h2V7h8v2h-6v2h-2v2h-2v2H3v-2Z"/></svg>`},
+          { name:'Squatting or kneeling',  color:'#fb923c',
+            icon:`<svg viewBox="0 0 24 24" class="w-3 h-3" fill="white"><path d="M12 2a2 2 0 110 4 2 2 0 010-4Zm-3 7h6l3 12h-2l-2-5h-2v5h-2v-5H9l-2 5H5l4-12Z"/></svg>`},
+          { name:'Standing for long periods',color:'#a855f7',
+            icon:`<svg viewBox="0 0 24 24" class="w-3 h-3" fill="white"><path d="M12 2a2 2 0 110 4 2 2 0 010-4ZM9 8h6l3 12h-2l-2-6h-2v6h-2v-6H8l-2 6H4L7 8Z"/></svg>`},
+          { name:'Walking long distances', color:'#10b981',
+            icon:`<svg viewBox="0 0 24 24" class="w-3 h-3" fill="white"><path d="M13 4a2 2 0 11-2 2 2 2 0 012-2Zm-4 7 2-3h3l2 2 3 9h-2l-2-5-1 5h-2l1-6-2-2-1 2v6H9v-8Z"/></svg>`},
+          { name:'Getting in and out of the car', color:'#facc15',
+            icon:`<svg viewBox="0 0 24 24" class="w-3 h-3" fill="white"><path d="M3 12h1l1-3 9-2 4 2 3 4h1v6h-2v-2H5v2H3v-7Zm4.5-1h9l-1.5-3h-6L7.5 11Zm.5 4a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0Zm12 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0Z"/></svg>`}
+        ];
+
+        /* --------- heights generator (ascending) -------- */
+        const heights = base => [base,
+          base+20+Math.random()*8,
+          base+38+Math.random()*6,
+          base+52+Math.random()*4];
+
+        /* --------- clear chart if script re-runs -------- */
+        function resetChart(){
+          document.querySelectorAll('#chart .bar').forEach(b=>b.remove());
+          document.getElementById('legend').innerHTML='';
+        }
+
+        /* --------- render once on load --------------- */
+        function renderBars(){
+          resetChart();
+          const svg   = document.getElementById('chart');
+          const legend= document.getElementById('legend');
+          const gW=56, gap=6;
+
+          movements.forEach((mv,i)=>{
+            const gx = 38 + i*gW;
+            heights(24+Math.random()*12).forEach((h,idx)=>{
+              const r=document.createElementNS('http://www.w3.org/2000/svg','rect');
+              r.setAttribute('x',gx+idx*(10+gap));
+              r.setAttribute('y',200-h);
+              r.setAttribute('width',10);
+              r.setAttribute('height',h);
+              r.setAttribute('fill',mv.color);
+              r.setAttribute('rx',2);
+              r.setAttribute('class','bar');
+              r.style.transformOrigin='center 200px';
+              r.style.transform='scaleY(0)';
+              r.style.transition=`transform 1s ease-out ${0.15*idx+0.2*i}s`;
+              svg.appendChild(r);
+              requestAnimationFrame(()=>r.style.transform='scaleY(1)');
+            });
+
+            legend.insertAdjacentHTML('beforeend',`
+              <li class="flex items-center gap-2">
+                <span class="inline-flex items-center justify-center w-4 h-4 rounded-full" style="background:${mv.color}">
+                  ${mv.icon}
+                </span>${mv.name}
+              </li>`);
+          });
+        }
+        renderBars();
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+
+</body></html>

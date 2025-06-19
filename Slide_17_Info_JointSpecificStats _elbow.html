@@ -1,0 +1,141 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "medical-teal": "#0F9890",
+        "softwave-yellow": "#FFD700"
+      },
+      "fontFamily": {
+        "montserrat": [
+          "Montserrat",
+          "sans-serif"
+        ],
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body class="font-montserrat bg-gradient-to-b from-gray-100 to-gray-200 min-h-screen">
+    <div id="quiz-container" class="max-w-md mx-auto px-4 py-6 relative h-[100vh] flex flex-col">
+        <!-- Top Header Banner -->
+        <div id="header-banner" class="bg-gradient-to-r from-[#323743] to-[#0D9C95] rounded-b-3xl pt-6 pb-6 px-4 -mx-4 -mt-6 relative">
+            <!-- Back Button -->
+            <div id="back-button" class="absolute top-6 left-4 z-10">
+                <button class="w-8 h-8 flex items-center justify-center">
+                    <i class="text-gray-300 text-xl" data-fa-i2svg=""><svg class="svg-inline--fa fa-arrow-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></i>
+                </button>
+            </div>
+            
+            <h1 class="text-center leading-tight pt-2">
+                <span class="text-white font-bold block mb-2 text-4xl">96% Pain-Free</span>
+                <span class="text-white font-bold block text-4xl">at 12 Weeks</span>
+            </h1>
+        </div>
+        
+        <!-- No Injections Required Section -->
+        <div id="no-injections-section" class="bg-white -mt-4 rounded-t-3xl -mx-4 px-6 py-4 shadow-sm">
+            <h2 class="text-gray-800 font-bold text-2xl text-center">No Injections Needed</h2>
+        </div>
+        
+        <!-- Illustration Section -->
+        <div id="illustration-section" class="flex-grow flex items-start justify-center mt-4 mb-6">
+            <div class="w-56 h-36 flex items-center justify-center">
+                <img class="w-full h-full object-contain" src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/e92d8af5-4fe1-43ad-10b9-1efda13ef900/public" alt="medical illustration showing person with shoulder pain transforming to pain-free movement with arrow, yellow circular background, clean vector style">
+            </div>
+        </div>
+        
+        <!-- Benefits Card -->
+        <div id="benefits-card" class="bg-white rounded-2xl mx-4 p-6 shadow-sm mb-6">
+            <!-- Icon and Header -->
+            <div class="flex items-start mb-4">
+                <div class="w-10 h-10 bg-softwave-yellow rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                    <i class="text-gray-800 text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-medal" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="medal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z"></path></svg></i>
+                </div>
+                <h3 class="text-gray-800 font-bold text-lg leading-tight">Pulsewave therapy beat cortisone for long-term relief—96.7% were pain-free at 12 weeks.</h3>
+            </div>
+            
+            <!-- Benefits List -->
+            <div class="space-y-3">
+                <div class="flex items-start">
+                    <i class="text-green-600 text-lg mr-3 mt-1" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    <span class="text-gray-700 font-medium">Grip strength increased by 3.36 points</span>
+                </div>
+                <div class="flex items-start">
+                    <i class="text-green-600 text-lg mr-3 mt-1" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    <span class="text-gray-700 font-medium">Outperformed physiotherapy and laser therapy</span>
+                </div>
+            </div>
+            
+            <!-- Source Citation -->
+            <div class="mt-4 pt-3 border-t border-gray-200">
+                <p class="text-gray-500 text-xs">Source: Ibrahim NH et al., 2021</p>
+            </div>
+        </div>
+        
+        <!-- Next Button -->
+        <div id="next-button" class="mb-8 px-8">
+            <button class="bg-softwave-yellow text-black font-bold text-base w-full py-3 rounded-full flex items-center justify-center shadow-md">
+                NEXT
+                <i class="ml-2 text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-play" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path></svg></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nextButton = document.getElementById('next-button').querySelector('button');
+            const backButton = document.getElementById('back-button').querySelector('button');
+            
+            nextButton.addEventListener('click', function() {
+                console.log('Navigating to next screen');
+            });
+            
+            backButton.addEventListener('click', function() {
+                console.log('Navigating back');
+            });
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+</body></html>

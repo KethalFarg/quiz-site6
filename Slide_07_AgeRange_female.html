@@ -1,0 +1,141 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script><script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body>
+    <div class="w-full max-w-sm mx-auto bg-gradient-to-b from-[#323743] to-[#0d9c95] min-h-screen" id="main-container">
+        
+        <!-- Header Section -->
+        <div id="header" class="w-full px-4 py-6 bg-transparent">
+    <!-- Top row with back button, section title, and progress -->
+    <div class="flex items-center justify-between mb-6">
+        <!-- Back button -->
+        <button class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+            <i class="text-white text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-arrow-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></i>
+        </button>
+        
+        <!-- Section title -->
+        <h1 class="text-white text-lg font-semibold">History</h1>
+        
+        <!-- Progress indicator -->
+        <span class="text-white/80 text-sm font-medium">3 of 6</span>
+    </div>
+    
+    <!-- Progress bar with 4 sections -->
+    <div class="flex space-x-2 mb-2 mt-2">
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-white/20 rounded-full h-2"></div>
+    </div>
+</div>
+
+        <!-- Question Section -->
+        <div id="question-section" class="px-6 py-8 text-center">
+            <h2 class="text-white text-2xl font-medium leading-8 mb-3">
+                What is your age range?
+            </h2>
+            <p class="text-white/80 text-base leading-6">
+                Your age helps us estimate your treatment time and recovery success
+            </p>
+        </div>
+
+        <!-- Age Options Grid -->
+        <div id="age-options" class="px-6 grid grid-cols-2 gap-4">
+            <button class="age-option relative bg-white/90 backdrop-blur-md border border-gray-200/50 rounded-2xl hover:bg-white transition-all duration-200 active:scale-98 overflow-hidden shadow-lg" data-name="ageRange" data-value="18–29">
+                <div class="w-full h-32 bg-gradient-to-b from-gray-100 to-gray-200">
+                    <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/400f268e-3273-4700-d0bd-36e55c226300/public" alt="18-29 age range" class="w-full h-full object-cover">
+                </div>
+                <div class="p-3 bg-white">
+                    <span class="text-gray-800 text-lg font-semibold">18–29</span>
+                </div>
+            </button>
+            
+            <button class="age-option relative bg-white/90 backdrop-blur-md border border-gray-200/50 rounded-2xl hover:bg-white transition-all duration-200 active:scale-98 overflow-hidden shadow-lg" data-name="ageRange" data-value="30–39">
+                <div class="w-full h-32 bg-gradient-to-b from-gray-100 to-gray-200">
+                    <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/e3710356-dde8-45f9-6f81-d1159c868200/public" alt="30-39 age range" class="w-full h-full object-cover">
+                </div>
+                <div class="p-3 bg-white">
+                    <span class="text-gray-800 text-lg font-semibold">30–39</span>
+                </div>
+            </button>
+            
+            <button class="age-option relative bg-white/90 backdrop-blur-md border border-gray-200/50 rounded-2xl hover:bg-white transition-all duration-200 active:scale-98 overflow-hidden shadow-lg" data-name="ageRange" data-value="40–49">
+                <div class="w-full h-32 bg-gradient-to-b from-gray-100 to-gray-200">
+                    <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/03b2665b-176a-4f7a-5f99-ebe6bdc35500/public" alt="40-49 age range" class="w-full h-full object-cover">
+                </div>
+                <div class="p-3 bg-white">
+                    <span class="text-gray-800 text-lg font-semibold">40–49</span>
+                </div>
+            </button>
+            
+            <button class="age-option relative bg-white/90 backdrop-blur-md border border-gray-200/50 rounded-2xl hover:bg-white transition-all duration-200 active:scale-98 overflow-hidden shadow-lg" data-name="ageRange" data-value="50+">
+                <div class="w-full h-32 bg-gradient-to-b from-gray-100 to-gray-200">
+                    <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/c5513f03-194d-4a1b-8936-abdf377cde00/public" alt="50+ age range" class="w-full h-full object-cover">
+                </div>
+                <div class="p-3 bg-white">
+                    <span class="text-gray-800 text-lg font-semibold">50+</span>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.age-option').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.age-option').forEach(btn => {
+                    btn.classList.remove('ring-4', 'ring-white/50', 'bg-white');
+                    btn.classList.add('bg-white/90');
+                });
+                
+                this.classList.remove('bg-white/90');
+                this.classList.add('bg-white', 'ring-4', 'ring-white/50');
+            });
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+</body></html>

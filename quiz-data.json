@@ -1,0 +1,20 @@
+{
+  "slides": [
+    {
+      "id": "landing page.html",
+      "next": "slide_01_genderselect.html"
+    },
+    {
+      "id": "slide_01_genderselect.html",
+      "next": "slide_02_jointselect.html"
+    },
+    {
+      "id": "slide_02_jointselect.html",
+      "next": "slide_03_zipcodeentry.html",
+      "section": "history",
+      "index": 2.0,
+      "total": 6.0,
+      "seg": 0.0
+    }
+  ]
+}

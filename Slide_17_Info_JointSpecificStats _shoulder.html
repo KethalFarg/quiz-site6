@@ -1,0 +1,145 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "medical-teal": "#0F9890",
+        "softwave-yellow": "#FFD700"
+      },
+      "fontFamily": {
+        "montserrat": [
+          "Montserrat",
+          "sans-serif"
+        ],
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body class="font-montserrat bg-gradient-to-b from-gray-100 to-gray-200 min-h-screen">
+    <div id="quiz-container" class="max-w-md mx-auto px-4 py-6 relative h-[100vh] flex flex-col">
+        <!-- Top Header Banner -->
+        <div id="header-banner" class="bg-gradient-to-r from-[#323743] to-[#0D9C95] rounded-b-3xl pt-6 pb-6 px-4 -mx-4 -mt-6 relative">
+            <!-- Back Button -->
+            <div id="back-button" class="absolute top-6 left-4 z-10">
+                <button class="w-8 h-8 flex items-center justify-center">
+                    <i class="text-gray-300 text-xl" data-fa-i2svg=""><svg class="svg-inline--fa fa-arrow-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></i>
+                </button>
+            </div>
+            
+            <h1 class="text-center leading-tight pt-2">
+                <span class="text-white font-bold block mb-2 text-4xl">3.6x Higher</span>
+                <span class="text-white font-bold block text-4xl">Success Rate</span>
+            </h1>
+        </div>
+        
+        <!-- For Rotator Cuff Relief Section -->
+        <div id="subtitle-section" class="bg-white -mx-4 -mt-4 rounded-t-3xl px-6 py-4 shadow-sm">
+            <h2 class="text-gray-800 font-bold text-2xl text-center">for Rotator Cuff Relief</h2>
+        </div>
+        
+        <!-- Illustration Section -->
+        <div id="illustration-section" class="flex-grow flex items-start justify-center mt-6 mb-6">
+            <div class="w-48 h-32 flex items-center justify-center">
+                <img class="w-full h-full object-contain" src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/019a0328-312f-4f4c-78d9-1e49abb7d300/public" alt="rotator cuff medical illustration">
+            </div>
+        </div>
+        
+        <!-- Benefits Card -->
+        <div id="benefits-card" class="bg-white rounded-2xl mx-4 p-6 shadow-sm mb-6">
+            <!-- Icon and Header -->
+            <div class="flex items-start mb-4">
+                <div class="w-10 h-10 bg-softwave-yellow rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                    <i class="text-gray-800 text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-heart-pulse" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart-pulse" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M228.3 469.1L47.6 300.4c-4.2-3.9-8.2-8.1-11.9-12.4h87c22.6 0 43-13.6 51.7-34.5l10.5-25.2 49.3 109.5c3.8 8.5 12.1 14 21.4 14.1s17.8-5 22-13.3L320 253.7l1.7 3.4c9.5 19 28.9 31 50.1 31H476.3c-3.7 4.3-7.7 8.5-11.9 12.4L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9zM503.7 240h-132c-3 0-5.8-1.7-7.2-4.4l-23.2-46.3c-4.1-8.1-12.4-13.3-21.5-13.3s-17.4 5.1-21.5 13.3l-41.4 82.8L205.9 158.2c-3.9-8.7-12.7-14.3-22.2-14.1s-18.1 5.9-21.8 14.8l-31.8 76.3c-1.2 3-4.2 4.9-7.4 4.9H16c-2.6 0-5 .4-7.3 1.1C3 225.2 0 208.2 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141C165 36.5 211.4 51.4 244 84l12 12 12-12c32.6-32.6 79-47.5 124.6-39.9C461.5 55.6 512 115.2 512 185.1v5.8c0 16.9-2.8 33.5-8.3 49.1z"></path></svg></i>
+                </div>
+                <h3 class="text-gray-800 font-bold text-lg leading-tight">Pulsewave therapy delivers significant pain relief and shoulder function improvement.</h3>
+            </div>
+            
+            <!-- Benefits List -->
+            <div class="space-y-3">
+                <div class="flex items-start">
+                    <i class="text-green-600 text-lg mr-3 mt-1" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    <span class="text-gray-700 font-medium">3.64x higher success rate vs. control</span>
+                </div>
+                <div class="flex items-start">
+                    <i class="text-green-600 text-lg mr-3 mt-1" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    <span class="text-gray-700 font-medium">Major gains in pain scores &amp; range of motion</span>
+                </div>
+                <div class="flex items-start">
+                    <i class="text-green-600 text-lg mr-3 mt-1" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    <span class="text-gray-700 font-medium">Effective across all rotator cuff studies</span>
+                </div>
+            </div>
+            
+            <!-- Source Citation -->
+            <div class="mt-4 pt-3 border-t border-gray-200">
+                <p class="text-gray-500 text-xs">Source: Xue X et al., BMC Musculoskelet Disord. 2024</p>
+            </div>
+        </div>
+        
+        <!-- Next Button -->
+        <div id="next-button" class="mb-8 px-8">
+            <button class="bg-softwave-yellow text-black font-bold text-base w-full py-3 rounded-full flex items-center justify-center shadow-md">
+                NEXT
+                <i class="ml-2 text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-play" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path></svg></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nextButton = document.getElementById('next-button').querySelector('button');
+            const backButton = document.getElementById('back-button').querySelector('button');
+            
+            nextButton.addEventListener('click', function() {
+                console.log('Navigating to next screen');
+            });
+            
+            backButton.addEventListener('click', function() {
+                console.log('Navigating back');
+            });
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+</body></html>

@@ -1,0 +1,246 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "primary": "#007BFF",
+        "accent": "#F8F9FA",
+        "warning": "#F05F56",
+        "success": "#4CAF50",
+        "alert": "#e53e3e"
+      },
+      "fontFamily": {
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body class="bg-gray-50 font-sans text-gray-800">
+    <!-- Top Alert Banner -->
+    <div id="top-alert-banner" class="sticky top-0 z-50 bg-alert py-3 px-4 text-center shadow-md">
+        <p class="text-white font-bold text-sm">Your trial treatment is temporarily reserved</p>
+    </div>
+    
+    <div class="container mx-auto px-4 pb-20">
+        <!-- Location Confirmation -->
+        <section id="location-confirmation" class="mt-6">
+            <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+                <p class="text-center text-gray-800 font-medium">We have located a qualified pulsewave provider near you in <span class="font-bold">53186</span></p>
+                <p class="text-center text-primary text-sm mt-1"><span class="cursor-pointer">(location listed below)</span></p>
+            </div>
+        </section>
+        
+        <!-- Eligibility Message -->
+        <section id="eligibility-message" class="mb-6">
+            <div class="bg-success/10 border border-success/20 rounded-lg p-5 text-center">
+                <h2 class="text-success text-2xl font-bold mb-1">Great News John!</h2>
+                <p class="text-gray-700">you could be a strong fit for treatment!</p>
+            </div>
+        </section>
+        
+        <!-- Results Score -->
+        <section id="results-score" class="mb-8">
+            <div class="flex flex-col items-center justify-center">
+                <div class="relative mb-3">
+                    <div class="w-32 h-32 rounded-full border-8 border-primary flex items-center justify-center">
+                        <span class="text-4xl font-bold text-gray-800">77</span>
+                    </div>
+                    <div class="absolute -bottom-1 right-0 bg-white rounded-full w-10 h-10 flex items-center justify-center border-4 border-primary">
+                        <i class="text-success" data-fa-i2svg=""><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></i>
+                    </div>
+                </div>
+                <p class="text-gray-700 font-medium">Results Outlook</p>
+                <p class="text-success font-bold text-lg">Good</p>
+            </div>
+        </section>
+        
+        <!-- Steps to Start Treatment -->
+        <section id="treatment-steps" class="mb-8">
+            <h2 class="text-xl font-bold mb-4 text-gray-800">Here's How to Start Feeling Better—Fast</h2>
+            
+            <div class="space-y-4">
+                <div id="step-1" class="bg-white rounded-lg shadow-sm p-4 flex items-start">
+                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">
+                        1
+                    </div>
+                    <p class="text-gray-700">Your local software provider will be contacting you.</p>
+                </div>
+                
+                <div id="step-2" class="bg-white rounded-lg shadow-sm p-4 flex items-start">
+                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">
+                        2
+                    </div>
+                    <p class="text-gray-700">Set an appointment time that is convenient for you.</p>
+                </div>
+                
+                <div id="step-3" class="bg-white rounded-lg shadow-sm p-4 flex items-start">
+                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">
+                        3
+                    </div>
+                    <p class="text-gray-700">Get a same-day exam, diagnostic, and trial treatment.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Provider Introduction -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden" id="provider-intro">
+        <div class="h-[280px] overflow-hidden flex items-center justify-center bg-gray-100">
+            <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/37691e2f-3deb-4af7-3238-6143ca550000/public" alt="Dr. InJun Chong" class="w-full h-full object-contain">
+        </div>
+        
+        <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Dr. InJun Chong</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">
+                Dr. InJun Chong is a trusted expert in non-invasive pain relief and regenerative therapy—actively treating professional athletes and everyday patients alike. At Reveal Wellness, he and his medical team use advanced therapies like PulseWave and stem cell-based treatments to accelerate healing, reduce pain, and help your body recover naturally. With years of experience and a results-driven approach, you're in the right hands to take your first step toward lasting relief.
+            </p>
+        </div>
+    </div>
+        
+        <!-- Map Embed -->
+        <section id="map-section" class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="h-[250px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107962.3144173403!2d-88.22868550132041!3d42.95369065179332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8805b745a7a83e17%3A0xc3d6d8c0622c5331!2sReveal%20Wellness!5e0!3m2!1sen!2sus!4v1750268318331!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Clinic Details -->
+        <section id="clinic-details" class="mb-8">
+            <div class="bg-white rounded-lg shadow-sm p-4 flex items-start">
+                <div class="mr-3 text-primary text-xl mt-1">
+                    <i data-fa-i2svg=""><svg class="svg-inline--fa fa-location-dot" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path></svg></i>
+                </div>
+                <div>
+                    <p class="font-bold text-gray-800">Reveal Wellness</p>
+                    <p class="text-gray-700 text-sm">1708 Paramount Court</p>
+                    <p class="text-gray-700 text-sm">Waukesha, WI 53186</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reveal Wellness Logo Section -->
+        <section id="logo-section" class="mb-8">
+            <div class="bg-gradient-to-r from-primary to-cyan-500 rounded-lg p-6 flex justify-center items-center">
+                <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/a4c56aa4-3487-431c-49da-ed8573199900/public" alt="Reveal Wellness Logo" class="h-12">
+            </div>
+        </section>
+        
+        <!-- Reviews Placeholder -->
+        <section id="reviews-section" class="mb-8">
+            <div id="review-carousel" class="bg-white rounded-lg shadow-sm p-4">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="font-bold text-gray-800">Patient Reviews</h3>
+                    <div class="flex text-yellow-400">
+                        <i data-fa-i2svg=""><svg class="svg-inline--fa fa-star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></i>
+                        <i data-fa-i2svg=""><svg class="svg-inline--fa fa-star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></i>
+                        <i data-fa-i2svg=""><svg class="svg-inline--fa fa-star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></i>
+                        <i data-fa-i2svg=""><svg class="svg-inline--fa fa-star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></i>
+                        <i data-fa-i2svg=""><svg class="svg-inline--fa fa-star-half-stroke" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half-stroke" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M320 376.4l.1-.1 26.4 14.1 85.2 45.5-16.5-97.6-4.8-28.7 20.7-20.5 70.1-69.3-96.1-14.2-29.3-4.3-12.9-26.6L320.1 86.9l-.1 .3V376.4zm175.1 98.3c2 12-3 24.2-12.9 31.3s-23 8-33.8 2.3L320.1 439.8 191.8 508.3C181 514 167.9 513.1 158 506s-14.9-19.3-12.9-31.3L169.8 329 65.6 225.9c-8.6-8.5-11.7-21.2-7.9-32.7s13.7-19.9 25.7-21.7L227 150.3 291.4 18c5.4-11 16.5-18 28.8-18s23.4 7 28.8 18l64.3 132.3 143.6 21.2c12 1.8 22 10.2 25.7 21.7s.7 24.2-7.9 32.7L470.5 329l24.6 145.7z"></path></svg></i>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden relative">
+                    <div class="flex transition-transform duration-300 ease-in-out" id="review-slider" style="transform: translateX(-200%);">
+                        <div class="w-full flex-shrink-0 p-2">
+                            <p class="text-sm italic text-gray-600">"The treatment was amazing! I felt relief after just one session."</p>
+                            <p class="text-xs font-bold mt-2">- Sarah M.</p>
+                        </div>
+                        <div class="w-full flex-shrink-0 p-2">
+                            <p class="text-sm italic text-gray-600">"Dr. Chong is extremely knowledgeable and made me feel comfortable right away."</p>
+                            <p class="text-xs font-bold mt-2">- James T.</p>
+                        </div>
+                        <div class="w-full flex-shrink-0 p-2">
+                            <p class="text-sm italic text-gray-600">"I've tried everything for my back pain, but this is the only treatment that actually worked!"</p>
+                            <p class="text-xs font-bold mt-2">- Rachel K.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center mt-3 space-x-1">
+                    <button class="w-2 h-2 rounded-full bg-gray-300" onclick="moveToSlide(0)"></button>
+                    <button class="w-2 h-2 rounded-full bg-gray-300" onclick="moveToSlide(1)"></button>
+                    <button class="w-2 h-2 rounded-full bg-primary" onclick="moveToSlide(2)"></button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Bottom Alert Banner -->
+    <div id="bottom-alert-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-alert py-3 px-4 text-center shadow-md">
+        <p class="text-white font-bold text-sm">Your trial treatment is temporarily reserved</p>
+    </div>
+    
+    <script>
+        // Simple carousel for reviews
+        let currentSlide = 0;
+        const slider = document.getElementById('review-slider');
+        const totalSlides = 3;
+        
+        function moveToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update indicators
+            const indicators = document.querySelectorAll('#reviews-section button');
+            indicators.forEach((btn, idx) => {
+                if (idx === currentSlide) {
+                    btn.classList.remove('bg-gray-300');
+                    btn.classList.add('bg-primary');
+                } else {
+                    btn.classList.remove('bg-primary');
+                    btn.classList.add('bg-gray-300');
+                }
+            });
+        }
+        
+        // Auto-advance slides
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            moveToSlide(currentSlide);
+        }, 5000);
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+</body></html>

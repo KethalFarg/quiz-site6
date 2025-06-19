@@ -1,0 +1,142 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+        ::-webkit-scrollbar { display: none;}
+        body { font-family: 'Inter', sans-serif; }
+        @keyframes underlineSlide {
+            0% { transform: scaleX(0); }
+            100% { transform: scaleX(1); }
+        }
+        .animate-underline {
+            animation: underlineSlide 1s ease-out forwards;
+        }
+    </style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "teal": "#2D9DA6",
+        "pink": "#E91E63"
+      },
+      "fontFamily": {
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head>
+<body class="bg-gray-100 text-gray-800">
+    
+    <!-- Header -->
+    <div class="flex items-center justify-center" id="header">
+        <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/82795f91-1757-4487-e66a-f69cd1fac600/public" alt="Better Joint Logo" class="h-16 w-auto">
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="bg-gradient-to-b from-[#323743] to-[#0d9c95] text-white px-6 py-8 text-center">
+        <h1 class="text-2xl font-bold leading-tight">
+            Will Pulsewave work for you?
+        </h1>
+    </section>
+
+    <!-- Subtitle -->
+    <section id="subtitle-section" class="bg-gray-200 px-6 py-6 text-center">
+        <p class="text-gray-700 text-lg leading-relaxed">
+            Discover your <span class="relative inline-block">
+                <span class="relative z-10">personalized results</span>
+                <span class="absolute bottom-0 left-0 w-full h-1 bg-teal transform origin-left animate-underline"></span>
+            </span><br>
+            in just 1 minute
+        </p>
+    </section>
+
+    <!-- Gender Selection -->
+    <section id="gender-selection" class="bg-gray-200 px-6 py-8">
+        <div class="flex space-x-4 max-w-sm mx-auto">
+            <!-- Male Option -->
+            <div id="male-option" class="flex-1">
+                <button class="w-full relative bg-white/90 backdrop-blur-md border border-gray-200/50 rounded-2xl hover:bg-white transition-all duration-200 active:scale-98 overflow-hidden shadow-lg mb-3">
+                    <div class="w-full h-32 bg-gradient-to-b from-blue-50 to-blue-100">
+                        <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/94c6331c-4d90-4ff2-898f-e0e5b7aa7f00/public" alt="Male" class="w-full h-full object-cover">
+                    </div>
+                </button>
+                <button class="w-full bg-gray-800 text-white py-4 rounded-lg font-medium text-lg hover:bg-gray-700 transition-colors" data-name="gender" data-value="Male">
+                    Male
+                </button>
+            </div>
+
+            <!-- Female Option -->
+            <div id="female-option" class="flex-1">
+                <button class="w-full relative bg-white/90 backdrop-blur-md border border-gray-200/50 rounded-2xl hover:bg-white transition-all duration-200 active:scale-98 overflow-hidden shadow-lg mb-3">
+                    <div class="w-full h-32 bg-gradient-to-b from-pink-50 to-pink-100">
+                        <img src="https://imagedelivery.net/ye6TBwd9tSy8dGYL2VHjgg/03b2665b-176a-4f7a-5f99-ebe6bdc35500/public" alt="Female" class="w-full h-full object-cover">
+                    </div>
+                </button>
+                <button class="w-full bg-pink text-white py-4 rounded-lg font-medium text-lg hover:bg-pink-600 transition-colors" data-name="gender" data-value="Female">
+                    Female
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructions -->
+    <section id="instructions-section" class="bg-gray-200 px-6 py-6 text-center">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">
+            Start by selecting your gender
+        </h2>
+        <p class="text-gray-600 text-base leading-relaxed max-w-md mx-auto">
+            Based on the latest research and clinical data, our quiz evaluates your unique case to forecast the effectiveness of pulsewave therapy and the timeline for when you'll feel relief.
+        </p>
+    </section>
+
+    <!-- Bottom Spacing -->
+    <div id="bottom-spacing" class="bg-gray-200 h-20"></div>
+
+    <script>
+        document.getElementById('male-option').addEventListener('click', function() {
+            this.classList.add('opacity-75');
+            setTimeout(() => {
+                this.classList.remove('opacity-75');
+            }, 200);
+        });
+
+        document.getElementById('female-option').addEventListener('click', function() {
+            this.classList.add('opacity-75');
+            setTimeout(() => {
+                this.classList.remove('opacity-75');
+            }, 200);
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+
+</body></html>

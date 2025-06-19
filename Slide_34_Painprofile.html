@@ -1,0 +1,280 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "fontFamily": {
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      },
+      "colors": {
+        "charcoal": "#323743",
+        "teal": "#0D9C95",
+        "deepTeal": "#058B8E",
+        "orange": "#F57C2B",
+        "red": "#D63E3E",
+        "blue": "#1FA9FF",
+        "violet": "#C836FF",
+        "yellow": "#FECA35",
+        "lavender": "#6C70FF",
+        "lavenderHover": "#585DFF",
+        "greyLine": "#E9ECF0"
+      }
+    }
+  }
+};</script>
+    <style>
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-pulse-slow {
+            animation: pulse 8s infinite;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .card-animate {
+            animation: fadeInUp 250ms ease-out forwards;
+            opacity: 0;
+        }
+        .card-animate:nth-child(1) { animation-delay: 0ms; }
+        .card-animate:nth-child(2) { animation-delay: 50ms; }
+        .card-animate:nth-child(3) { animation-delay: 100ms; }
+        .card-animate:nth-child(4) { animation-delay: 150ms; }
+        .card-animate:nth-child(5) { animation-delay: 200ms; }
+        
+        @keyframes growBar {
+            from { width: 0%; }
+            to { width: var(--target-width); }
+        }
+        .bar-animate {
+            animation: growBar 300ms ease-out forwards;
+            width: 0%;
+        }
+    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body class="font-sans bg-gradient-to-b from-charcoal to-teal min-h-screen w-[375px] mx-auto pb-20">
+    <!-- Title Bar -->
+    <header id="header" class="w-full pt-6 pb-4">
+        <h1 class="text-center text-white font-semibold text-lg">Your {{jointselected}} Pain Profile</h1>
+    </header>
+    
+    <!-- Patient Chip Card -->
+    <div id="patient-chip" class="mx-4 mb-6 bg-deepTeal rounded-lg p-3 flex items-center card-animate shadow-md">
+        <div class="w-[26px] h-[26px] bg-white rounded-full flex items-center justify-center mr-3">
+            <i class="text-deepTeal text-xs" data-fa-i2svg=""><svg class="svg-inline--fa fa-user" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg></i>
+        </div>
+        <div class="flex flex-col">
+            <p class="text-white font-bold text-[14px]">Sarah Johnson</p>
+            <p class="text-gray-200 text-[12px]">42 years old</p>
+        </div>
+    </div>
+    
+    <!-- Insight Stack -->
+    <div id="insight-stack" class="px-4 flex flex-col gap-4">
+        <!-- Patient History Card -->
+        <div id="patient-history" class="bg-white rounded-lg p-4 shadow card-animate">
+            <div class="flex items-center mb-3">
+                <div class="w-8 h-8 rounded-full bg-deepTeal flex items-center justify-center mr-2">
+                    <i class="text-white" aria-label="Patient History" data-fa-i2svg=""><svg class="svg-inline--fa fa-stethoscope" aria-label="Patient History" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="stethoscope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M142.4 21.9c5.6 16.8-3.5 34.9-20.2 40.5L96 71.1V192c0 53 43 96 96 96s96-43 96-96V71.1l-26.1-8.7c-16.8-5.6-25.8-23.7-20.2-40.5s23.7-25.8 40.5-20.2l26.1 8.7C334.4 19.1 352 43.5 352 71.1V192c0 77.2-54.6 141.6-127.3 156.7C231 404.6 278.4 448 336 448c61.9 0 112-50.1 112-112V265.3c-28.3-12.3-48-40.5-48-73.3c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V336c0 97.2-78.8 176-176 176c-92.9 0-168.9-71.9-175.5-163.1C87.2 334.2 32 269.6 32 192V71.1c0-27.5 17.6-52 43.8-60.7l26.1-8.7c16.8-5.6 34.9 3.5 40.5 20.2zM480 224a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"></path></svg></i>
+                </div>
+                <h2 class="font-semibold text-charcoal">Patient History</h2>
+            </div>
+            
+            <div class="space-y-2">
+                <div class="flex justify-between">
+                    <span class="text-gray-600">Pain Location</span>
+                    <span class="font-semibold">{{jointselected}}</span>
+                </div>
+                <div class="h-[1px] bg-greyLine"></div>
+                
+                <div class="flex justify-between">
+                    <span class="text-gray-600">Diagnosis</span>
+                    <span class="font-semibold">Osteoarthritis</span>
+                </div>
+                <div class="h-[1px] bg-greyLine"></div>
+                
+                <div class="flex justify-between">
+                    <span class="text-gray-600">Restricted Mobility</span>
+                    <span class="font-semibold">Moderate</span>
+                </div>
+                <div class="h-[1px] bg-greyLine"></div>
+                
+                <div class="flex justify-between">
+                    <span class="text-gray-600">Pain Duration</span>
+                    <span class="font-semibold">2+ years</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pain Levels Card -->
+        <div id="pain-levels" class="bg-white rounded-lg p-4 shadow card-animate">
+            <div class="flex items-center mb-3">
+                <div class="w-8 h-8 rounded-full bg-deepTeal flex items-center justify-center mr-2">
+                    <i class="text-white" aria-label="Pain Levels" data-fa-i2svg=""><svg class="svg-inline--fa fa-triangle-exclamation" aria-label="Pain Levels" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="triangle-exclamation" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg></i>
+                </div>
+                <h2 class="font-semibold text-charcoal">Pain Levels</h2>
+            </div>
+            
+            <div class="space-y-3 mb-3">
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm text-gray-600">Average</span>
+                        <span class="text-sm font-semibold text-orange">4/10</span>
+                    </div>
+                    <div class="h-3 bg-greyLine rounded-full">
+                        <div class="bar-animate h-full bg-orange rounded-full" style="--target-width: 40%"></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm text-gray-600">At worst</span>
+                        <span class="text-sm font-semibold text-red">8/10</span>
+                    </div>
+                    <div class="h-3 bg-greyLine rounded-full">
+                        <div class="bar-animate h-full bg-red rounded-full" style="--target-width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-sm text-gray-700 mb-3">
+                Your chronic knee pain is significantly impacting your daily activities and quality of life. The high flare-up intensity suggests inflammation is a major factor. With proper treatment and management, many patients see a 40-60% reduction in both frequency and intensity of pain episodes.
+            </p>
+            
+            <span class="inline-block bg-yellow text-charcoal font-semibold text-xs py-1.5 px-3 rounded-full cursor-pointer">
+                Check if Pulsewave eases inflammation →
+            </span>
+        </div>
+        
+        <!-- Mobility & Progression Card -->
+        <div id="mobility" class="bg-white rounded-lg p-4 shadow card-animate">
+            <div class="flex items-center mb-3">
+                <div class="w-8 h-8 rounded-full bg-deepTeal flex items-center justify-center mr-2">
+                    <i class="text-white" aria-label="Mobility and Progression" data-fa-i2svg=""><svg class="svg-inline--fa fa-person-running" aria-label="Mobility and Progression" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="person-running" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M320 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM125.7 175.5c9.9-9.9 23.4-15.5 37.5-15.5c1.9 0 3.8 .1 5.6 .3L137.6 254c-9.3 28 1.7 58.8 26.8 74.5l86.2 53.9-25.4 88.8c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l28.7-100.4c5.9-20.6-2.6-42.6-20.7-53.9L238 299l30.9-82.4 5.1 12.3C289 264.7 323.9 288 362.7 288H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H362.7c-12.9 0-24.6-7.8-29.5-19.7l-6.3-15c-14.6-35.1-44.1-61.9-80.5-73.1l-48.7-15c-11.1-3.4-22.7-5.2-34.4-5.2c-31 0-60.8 12.3-82.7 34.3L57.4 153.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l23.1-23.1zM91.2 352H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h69.6c19 0 36.2-11.2 43.9-28.5L157 361.6l-9.5-6c-17.5-10.9-30.5-26.8-37.9-44.9L91.2 352z"></path></svg></i>
+                </div>
+                <h2 class="font-semibold text-charcoal">Mobility &amp; Progression</h2>
+            </div>
+            
+            <div class="mb-3">
+                <div class="flex justify-between mb-1">
+                    <span class="text-sm text-gray-600">Mobility</span>
+                    <span class="text-sm font-semibold text-blue">2/10</span>
+                </div>
+                <div class="h-3 bg-greyLine rounded-full">
+                    <div class="bar-animate h-full bg-blue rounded-full" style="--target-width: 20%"></div>
+                </div>
+            </div>
+            
+            <p class="text-sm text-gray-700 mb-3">
+                Your limited mobility score indicates significant restriction in movement and daily activities. A personalized mobility plan could help restore function and independence.
+            </p>
+            
+            <span class="inline-block bg-yellow text-charcoal font-semibold text-xs py-1.5 px-3 rounded-full cursor-pointer">
+                Regain mobility — generate your report →
+            </span>
+        </div>
+        
+        <!-- Life Impact Card -->
+        <div id="life-impact" class="bg-white rounded-lg p-4 shadow card-animate">
+            <div class="flex items-center mb-3">
+                <div class="w-8 h-8 rounded-full bg-deepTeal flex items-center justify-center mr-2">
+                    <i class="text-white" aria-label="Life Impact" data-fa-i2svg=""><svg class="svg-inline--fa fa-heart-crack" aria-label="Life Impact" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart-crack" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M119.4 44.1c23.3-3.9 46.8-1.9 68.6 5.3l49.8 77.5-75.4 75.4c-1.5 1.5-2.4 3.6-2.3 5.8s1 4.2 2.6 5.7l112 104c2.9 2.7 7.4 2.9 10.5 .3s3.8-7 1.7-10.4l-60.4-98.1 90.7-75.6c2.6-2.1 3.5-5.7 2.4-8.8L296.8 61.8c28.5-16.7 62.4-23.2 95.7-17.6C461.5 55.6 512 115.2 512 185.1v5.8c0 41.5-17.2 81.2-47.6 109.5L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9L47.6 300.4C17.2 272.1 0 232.4 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141z"></path></svg></i>
+                </div>
+                <h2 class="font-semibold text-charcoal">Life Impact</h2>
+            </div>
+            
+            <div class="mb-3">
+                <div class="flex justify-between mb-1">
+                    <span class="text-sm text-gray-600">Frustration</span>
+                    <span class="text-sm font-semibold text-violet">4/10</span>
+                </div>
+                <div class="h-3 bg-greyLine rounded-full">
+                    <div class="bar-animate h-full bg-violet rounded-full" style="--target-width: 40%"></div>
+                </div>
+            </div>
+            
+            <p class="text-sm text-gray-700">
+                Your pain is moderately affecting your mood, sleep quality, and ability to engage in activities you enjoy. Our solution targets not just physical pain but also emotional well-being, helping you set achievable activity goals.
+            </p>
+        </div>
+        
+        <!-- Goals & Recommendations Card -->
+        <div id="goals" class="bg-white rounded-lg p-4 shadow card-animate">
+            <div class="flex items-start">
+                <div class="w-8 h-8 border border-deepTeal rounded flex items-center justify-center mr-3 flex-shrink-0">
+                    <i class="text-deepTeal" aria-label="Goals and Recommendations" data-fa-i2svg=""><svg class="svg-inline--fa fa-heart-circle-check" aria-label="Goals and Recommendations" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart-circle-check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9l2.6-2.4C267.2 438.6 256 404.6 256 368c0-97.2 78.8-176 176-176c28.3 0 55 6.7 78.7 18.5c.9-6.5 1.3-13 1.3-19.6v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5zM576 368a144 144 0 1 0 -288 0 144 144 0 1 0 288 0zm-76.7-43.3c6.2 6.2 6.2 16.4 0 22.6l-72 72c-6.2 6.2-16.4 6.2-22.6 0l-40-40c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L416 385.4l60.7-60.7c6.2-6.2 16.4-6.2 22.6 0z"></path></svg></i>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-charcoal mb-1">Goals &amp; Recommendations</h2>
+                    <p class="text-sm text-gray-700">
+                        Based on your profile, we've identified targeted solutions that could reduce your pain by 40% and improve mobility within 8 weeks. Your personalized report will outline an achievable path to better joint health.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Black Glass Sticky Footer -->
+    <div id="cta-footer" class="fixed bottom-0 left-0 right-0 w-[375px] mx-auto">
+        <div class="bg-black bg-opacity-80 backdrop-blur-md border-t border-white border-opacity-20 p-4">
+            <button role="button" aria-pressed="false" class="w-full bg-yellow hover:bg-yellow/90 active:scale-95 transition-all h-[52px] rounded-full text-charcoal font-semibold shadow-lg animate-pulse-slow">
+                Generate My Solution Report
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        // Initialize bar animations after page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animation for bars is handled by CSS with class .bar-animate
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+</body></html>

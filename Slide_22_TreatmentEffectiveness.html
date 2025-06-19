@@ -1,0 +1,119 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "fontFamily": {
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    
+    <style>
+      body { font-family: 'Inter', sans-serif !important;
+      }
+      
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body>
+    <div class="w-full max-w-sm mx-auto bg-gradient-to-b from-[#323743] to-[#0d9c95] h-screen" id="main-container">
+        <!-- Header Section -->
+        <div id="header" class="w-full px-4 py-6 bg-transparent">
+    <!-- Top row with back button, section title, and progress -->
+    <div class="flex items-center justify-between mb-6">
+        <!-- Back button -->
+        <button class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+            <i class="text-white text-sm" data-fa-i2svg=""><svg class="svg-inline--fa fa-arrow-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></i>
+        </button>
+        
+        <!-- Section title -->
+        <h1 class="text-white text-lg font-semibold">Health Impact</h1>
+        
+        <!-- Progress indicator -->
+        <span class="text-white/80 text-sm font-medium">4 of 7</span>
+    </div>
+    
+    <!-- Progress bar with 4 sections -->
+    <div class="flex space-x-2 mb-2 mt-2">
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-[#FECA35] rounded-full h-2"></div>
+        <div class="flex-1 bg-white/20 rounded-full h-2"></div>
+    </div>
+</div>
+
+        <!-- Question Section -->
+        <div id="question-section" class="px-6 pt-8 pb-6">
+            <div class="text-center mb-8">
+                <h2 class="text-white text-2xl font-semibold leading-tight mb-2">How effective have past or current {{jointselected}} treatments been?</h2>
+                <p class="text-white/80 text-sm">(select one)</p>
+            </div>
+
+            <!-- Answer Options -->
+            <div id="answer-options" class="space-y-4">
+                <button class="w-full p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white text-lg font-medium hover:bg-white/20 transition-all duration-200 shadow-lg" data-name="treatmentEffectiveness" data-value="No improvement">
+                    No improvement
+                </button>
+                
+                <button class="w-full p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white text-lg font-medium hover:bg-white/20 transition-all duration-200 shadow-lg">
+                    Temporary Relief
+                </button>
+                
+                <button class="w-full p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white text-lg font-medium hover:bg-white/20 transition-all duration-200 shadow-lg" data-name="treatmentEffectiveness" data-value="Moderate improvement">
+                    Moderate improvement
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('#answer-options button').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('#answer-options button').forEach(btn => {
+                    btn.classList.remove('bg-white/30', 'border-white/40');
+                    btn.classList.add('bg-white/10', 'border-white/20');
+                });
+                
+                this.classList.remove('bg-white/10', 'border-white/20');
+                this.classList.add('bg-white/30', 'border-white/40');
+            });
+        });
+    </script>
+
+    <script src="quiz-integration.js"></script>
+
+
+
+</body></html>
